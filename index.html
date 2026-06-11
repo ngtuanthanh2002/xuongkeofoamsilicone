@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AOFENG - Keo bọt nở PU Foam chất lượng cao. Giải pháp chống thấm, cách âm, cách nhiệt hàng đầu cho xây dựng và công nghiệp.">
+  <title>AOFENG | Keo Bọt Nở PU Foam Chất Lượng Cao</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            aofeng: {
+              50: '#eef4fb',
+              100: '#dce9f7',
+              200: '#b9d3ef',
+              300: '#8fb8e3',
+              400: '#5c96d4',
+              500: '#2d6fad',
+              600: '#003676',
+              700: '#002d62',
+              800: '#00244e',
+              900: '#001a3a',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-white text-gray-800 antialiased">
+
+  <!-- HEADER -->
+  <header id="header" class="site-header fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-[4.5rem] gap-3">
+        <a href="#" class="site-logo flex-shrink-0 min-w-0">
+          <img src="images/Logo.png" alt="AOFENG" class="site-logo-img" width="140" height="40">
+        </a>
+        <nav class="hidden lg:flex items-center gap-6">
+          <a href="#products" class="text-gray-600 hover:text-aofeng-600 font-medium transition-colors">Sản phẩm</a>
+          <a href="#promotion" class="text-gray-600 hover:text-aofeng-600 font-medium transition-colors">Khuyến mãi</a>
+          <a href="#video" class="text-gray-600 hover:text-aofeng-600 font-medium transition-colors">Video</a>
+          <a href="#reviews" class="text-gray-600 hover:text-aofeng-600 font-medium transition-colors">Đánh giá</a>
+          <a href="#contact" class="text-gray-600 hover:text-aofeng-600 font-medium transition-colors">Liên hệ</a>
+        </nav>
+        <div class="hidden lg:flex items-center gap-4 flex-shrink-0">
+          <a href="tel:0901234567" class="text-aofeng-600 font-semibold hover:text-aofeng-700 transition-colors whitespace-nowrap">0901 234 567</a>
+          <a href="#contact" class="btn-shine bg-aofeng-600 text-white px-6 py-2.5 rounded-full font-semibold hover:bg-aofeng-700 transition-colors whitespace-nowrap">Báo giá ngay</a>
+        </div>
+        <div class="flex lg:hidden items-center gap-1.5 flex-shrink-0">
+          <a href="tel:0901234567" class="header-mobile-call" aria-label="Gọi 0901 234 567">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          </a>
+          <a href="#contact" class="header-mobile-cta">Đặt hàng</a>
+          <button id="menu-btn" class="header-menu-btn" aria-label="Mở menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-overlay" class="mobile-overlay fixed inset-0 bg-black/50 z-50 lg:hidden"></div>
+  <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-80 max-w-full bg-white z-50 shadow-2xl lg:hidden">
+    <div class="flex items-center justify-between p-6 border-b border-aofeng-100">
+      <img src="images/Logo.png" alt="AOFENG" class="site-logo-img site-logo-img--menu" width="120" height="36">
+      <button id="close-btn" class="p-2 text-gray-600 hover:text-aofeng-600" aria-label="Đóng menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <nav class="flex flex-col p-6 gap-1">
+      <a href="#products" class="mobile-nav-link text-lg font-medium text-gray-700 hover:text-aofeng-600 py-3 border-b border-gray-100">Sản phẩm</a>
+      <a href="#promotion" class="mobile-nav-link text-lg font-medium text-gray-700 hover:text-aofeng-600 py-3 border-b border-gray-100">Khuyến mãi</a>
+      <a href="#video" class="mobile-nav-link text-lg font-medium text-gray-700 hover:text-aofeng-600 py-3 border-b border-gray-100">Video thực tế</a>
+      <a href="#reviews" class="mobile-nav-link text-lg font-medium text-gray-700 hover:text-aofeng-600 py-3 border-b border-gray-100">Đánh giá</a>
+      <a href="#contact" class="mobile-nav-link text-lg font-medium text-gray-700 hover:text-aofeng-600 py-3">Đặt hàng</a>
+      <a href="tel:0901234567" class="mobile-nav-link mt-4 bg-aofeng-600 text-white text-center py-4 rounded-xl font-bold text-lg">Gọi 0901 234 567</a>
+    </nav>
+  </div>
+
+  <main>
+    <!-- HERO — mobile first -->
+    <section id="hero" class="hero-section pb-10 lg:pb-16">
+      <div class="max-w-lg lg:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="hero-visual-wrap mb-8 lg:hidden reveal">
+          <div class="hero-product-card img-product-frame">
+            <img src="images/A1.jpg" alt="Keo bọt nở PU Foam AOFENG AL2" loading="eager">
+          </div>
+          <img src="images/Keo_Alone.png" alt="" class="hero-float-can hero-float-can-1" aria-hidden="true">
+          <img src="images/Keo_Alone2.png" alt="" class="hero-float-can hero-float-can-2" aria-hidden="true">
+          <div class="hero-price-tag">
+            <strong>79.000đ</strong>
+            <span>1 chai AL2 · Miễn ship</span>
+          </div>
+        </div>
+        <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+          <div class="reveal order-2 lg:order-1">
+            <span class="section-label mb-4">Chống thấm · Cách âm · Dễ dùng</span>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
+              Keo Bọt Nở <span class="text-aofeng-600">PU Foam AOFENG</span>
+            </h1>
+            <p class="text-base sm:text-lg text-gray-600 leading-relaxed mb-5">
+              Xử lý nhanh khe hở, chống thấm, cách âm cách nhiệt. Hai dòng <strong>AL2</strong> đa năng và <strong>AM2</strong> kết dính chuyên dụng.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="text-xs font-semibold px-3 py-1.5 rounded-full bg-white border border-aofeng-200 text-aofeng-800 shadow-sm">750ml / chai</span>
+              <span class="text-xs font-semibold px-3 py-1.5 rounded-full bg-white border border-aofeng-200 text-aofeng-800 shadow-sm">Nở 2.5×</span>
+              <span class="text-xs font-semibold px-3 py-1.5 rounded-full bg-white border border-aofeng-200 text-aofeng-800 shadow-sm">Lỗi 1 đổi 1</span>
+            </div>
+            <ul class="space-y-2.5 mb-7 text-sm sm:text-base text-gray-700">
+              <li class="flex items-start gap-2.5"><svg class="w-5 h-5 text-aofeng-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Nở lấp kín khe hở — bám cực chắc</li>
+              <li class="flex items-start gap-2.5"><svg class="w-5 h-5 text-aofeng-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Chống thấm tối đa — cách âm &amp; cách nhiệt</li>
+              <li class="flex items-start gap-2.5"><svg class="w-5 h-5 text-aofeng-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Thi công dễ dùng — ai cũng có thể tự làm</li>
+            </ul>
+            <div class="flex flex-col gap-3">
+              <a href="#contact" class="btn-shine w-full sm:w-auto text-center bg-aofeng-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-aofeng-700 transition-colors shadow-lg shadow-aofeng-600/20">Đặt hàng ngay — Từ 79.000đ</a>
+              <a href="#promotion" class="w-full sm:w-auto text-center px-8 py-3.5 rounded-xl font-semibold text-aofeng-700 bg-white border border-aofeng-200 hover:bg-aofeng-50 transition-colors shadow-sm">Xem combo khuyến mãi →</a>
+            </div>
+          </div>
+          <div class="hidden lg:block reveal-right order-1 lg:order-2">
+            <div class="hero-visual-wrap max-w-md ml-auto">
+              <div class="hero-product-card img-product-frame">
+                <img src="images/A1.jpg" alt="Keo bọt nở AOFENG AL2">
+              </div>
+              <img src="images/Keo_Alone.png" alt="" class="hero-float-can hero-float-can-1" aria-hidden="true">
+              <img src="images/Keo_Alone2.png" alt="" class="hero-float-can hero-float-can-2" aria-hidden="true">
+              <div class="hero-price-tag">
+                <strong>79.000đ</strong>
+                <span>1 chai AL2 · Miễn ship</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST STRIP -->
+    <section class="trust-strip border-y border-aofeng-100 bg-aofeng-50/80">
+      <div class="max-w-lg lg:max-w-7xl mx-auto px-4 py-4 grid grid-cols-2 sm:grid-cols-4 gap-3 text-center text-xs sm:text-sm">
+        <div class="trust-strip-item"><span class="trust-strip-icon">✓</span> Kiểm tra hàng trước thanh toán</div>
+        <div class="trust-strip-item"><span class="trust-strip-icon">✓</span> Miễn phí vận chuyển</div>
+        <div class="trust-strip-item"><span class="trust-strip-icon">✓</span> Giao hàng toàn quốc</div>
+        <div class="trust-strip-item"><span class="trust-strip-icon">✓</span> Hỗ trợ 24/7</div>
+      </div>
+    </section>
+
+    <!-- PROBLEMS -->
+    <section id="problems" class="problems-section py-12 lg:py-20">
+      <div class="max-w-lg lg:max-w-4xl mx-auto px-4 sm:px-6">
+        <div class="reveal text-center mb-8">
+          <span class="section-label justify-center mb-3">Vấn đề thường gặp</span>
+          <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Nhà bạn đang bị <span class="text-red-600">thấm — nứt — hở khe?</span></h2>
+          <p class="text-gray-500 text-sm sm:text-base">Để lâu gây hư tường, bong sơn, tốn tiền sửa chữa</p>
+        </div>
+        <div class="grid grid-cols-2 gap-3 sm:gap-4 reveal">
+          <div class="problem-card">
+            <div class="problem-card-img"><img src="images/B1.jpg" alt="Ống nước rò rỉ"></div>
+            <div class="problem-card-body"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg><p>Ống nước rò rỉ</p></div>
+          </div>
+          <div class="problem-card">
+            <div class="problem-card-img"><img src="images/C1.jpg" alt="Tường nứt thấm nước"></div>
+            <div class="problem-card-body"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg><p>Tường nứt, thấm nước</p></div>
+          </div>
+          <div class="problem-card">
+            <div class="problem-card-img"><img src="images/C2.jpg" alt="Trần nhà xuống cấp"></div>
+            <div class="problem-card-body"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg><p>Trần nhà xuống cấp</p></div>
+          </div>
+          <div class="problem-card">
+            <div class="problem-card-img"><img src="images/A2.jpg" alt="Mái tôn dột nước"></div>
+            <div class="problem-card-body"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg><p>Mái tôn dột nước</p></div>
+          </div>
+        </div>
+        <div class="reveal text-center">
+          <p class="problems-cta">Xử lý ngay với keo bọt nở PU Foam AOFENG</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-20 lg:py-28 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div class="reveal-left relative">
+            <div class="absolute -inset-3 rounded-3xl border-2 border-aofeng-200/60 pointer-events-none hidden sm:block"></div>
+            <div class="img-product-frame rounded-3xl shadow-xl ring-4 ring-white">
+              <img src="images/B2.jpg" alt="Sản phẩm keo bọt nở AOFENG AL2">
+            </div>
+            <div class="absolute -bottom-6 -right-6 bg-aofeng-600 text-white rounded-2xl p-6 shadow-xl hidden sm:block">
+              <p class="text-4xl font-bold">15+</p>
+              <p class="text-aofeng-100 text-sm">Năm phát triển</p>
+            </div>
+          </div>
+          <div class="reveal-right">
+            <span class="text-aofeng-600 font-semibold text-sm uppercase tracking-wider">Về chúng tôi</span>
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mt-3 mb-6">AOFENG - Đối tác tin cậy trong ngành keo bọt nở</h2>
+            <p class="text-gray-600 leading-relaxed mb-6">AOFENG là thương hiệu chuyên sản xuất và phân phối keo bọt nở PU Foam chất lượng cao tại Việt Nam. Với công nghệ tiên tiến và đội ngũ kỹ thuật giàu kinh nghiệm, chúng tôi cam kết mang đến giải pháp tối ưu cho mọi công trình.</p>
+            <p class="text-gray-600 leading-relaxed mb-8">Sản phẩm của chúng tôi đạt tiêu chuẩn quốc tế, thân thiện với môi trường và được tin dùng bởi hàng trăm đối tác trên toàn quốc.</p>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <span class="w-6 h-6 bg-aofeng-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-4 h-4 text-aofeng-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                <span class="text-gray-700">Công nghệ sản xuất hiện đại, kiểm soát chất lượng nghiêm ngặt</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-6 h-6 bg-aofeng-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-4 h-4 text-aofeng-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                <span class="text-gray-700">Đội ngũ tư vấn kỹ thuật chuyên nghiệp, hỗ trợ 24/7</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-6 h-6 bg-aofeng-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-4 h-4 text-aofeng-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                <span class="text-gray-700">Giá cả cạnh tranh, giao hàng toàn quốc</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider max-w-4xl mx-auto"></div>
+
+    <!-- PRODUCTS -->
+    <section id="products" class="py-20 lg:py-28 bg-aofeng-50 relative overflow-hidden">
+      <img src="images/Keo_Alone.png" alt="" class="decor-can decor-products-1 animate-float-drift hidden lg:block" aria-hidden="true">
+      <img src="images/Keo_Alone2.png" alt="" class="decor-can decor-products-2 animate-float-slow hidden lg:block" aria-hidden="true">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+          <span class="text-aofeng-600 font-semibold text-sm uppercase tracking-wider">Sản phẩm</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mt-3 mb-4">Dòng sản phẩm PU Foam</h2>
+          <p class="text-gray-600">Đa dạng chủng loại đáp ứng mọi nhu cầu từ xây dựng dân dụng đến công nghiệp nặng</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div class="reveal delay-100 product-card-h">
+            <div class="product-card-img bg-aofeng-50">
+              <img src="images/A1.jpg" alt="PU Foam AL2">
+            </div>
+            <div class="product-card-body p-5 sm:p-6">
+              <span class="text-xs font-semibold text-aofeng-600 bg-aofeng-50 px-3 py-1 rounded-full">Dòng xanh · AL2</span>
+              <h3 class="text-xl font-bold text-gray-900 mt-3 mb-2">Keo Bọt Nở AL2</h3>
+              <p class="text-gray-600 text-sm leading-relaxed">Keo bọt nở đa năng cho lấp khe, chống thấm cửa sổ, cửa ra vào và các khe hở trong xây dựng.</p>
+              <div class="product-specs">
+                <span class="product-spec">750ml</span>
+                <span class="product-spec">Chống thấm</span>
+                <span class="product-spec">Cách âm</span>
+              </div>
+              <a href="#promotion" data-switch-promo="al2" class="inline-flex items-center gap-2 text-aofeng-600 font-semibold mt-4 hover:gap-3 transition-all">Xem khuyến mãi <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+            </div>
+          </div>
+          <div class="reveal delay-200 product-card-h product-card-dark">
+            <div class="product-card-img product-card-img--dark">
+              <img src="images/A2.jpg" alt="PU Foam AM2">
+            </div>
+            <div class="product-card-body p-5 sm:p-6">
+              <span class="text-xs font-semibold bg-gray-900 text-amber-400 px-3 py-1 rounded-full">Dòng đen · AM2</span>
+              <h3 class="text-xl font-bold text-gray-900 mt-3 mb-2">Keo Bọt Nở AM2</h3>
+              <p class="text-gray-600 text-sm leading-relaxed">Dòng keo foam màu đen chuyên dùng cho kết dính và lấp đầy khe hở — bám dính mạnh, nở đều, bền lâu.</p>
+              <div class="product-specs">
+                <span class="product-spec">750ml</span>
+                <span class="product-spec">Kết dính</span>
+                <span class="product-spec">Lấp khe</span>
+              </div>
+              <a href="#promotion" data-switch-promo="am2" class="inline-flex items-center gap-2 text-aofeng-600 font-semibold mt-4 hover:gap-3 transition-all">Xem khuyến mãi <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROMOTION -->
+    <section id="promotion" class="py-12 lg:py-20 relative overflow-hidden bg-aofeng-50/50">
+      <div class="max-w-lg lg:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-10 reveal">
+          <span class="inline-block text-aofeng-600 font-semibold text-sm uppercase tracking-wider mb-3">Khuyến mãi</span>
+          <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">Combo keo bọt nở AOFENG</h2>
+          <p class="text-gray-600">Mua nhiều ưu đãi lớn — Tặng quà hấp dẫn. Miễn phí vận chuyển cho tất cả đơn hàng!</p>
+        </div>
+
+        <!-- Product toggle -->
+        <div class="flex justify-center mb-12 reveal">
+          <div class="promo-tabs inline-flex p-1.5 rounded-2xl bg-white shadow-lg border border-aofeng-100">
+            <button type="button" class="promo-tab active" data-promo="al2">
+              <span class="promo-tab-dot bg-aofeng-500"></span>
+              AL2 · Dòng xanh
+            </button>
+            <button type="button" class="promo-tab" data-promo="am2">
+              <span class="promo-tab-dot bg-gray-900"></span>
+              AM2 · Dòng đen
+            </button>
+          </div>
+        </div>
+
+        <!-- AL2 Panel -->
+        <div id="promo-al2" class="promo-panel active">
+          <div class="promo-interactive reveal" data-promo-line="al2" data-can-src="images/Keo_Alone.png">
+            <div class="promo-split">
+              <aside class="promo-preview-panel promo-preview-panel--green">
+                <div class="promo-cans-display" data-cans-display></div>
+                <p class="promo-preview-caption" data-preview-caption>Combo 1 chai AL2</p>
+                <p class="promo-preview-price" data-preview-price>79.000đ</p>
+              </aside>
+              <div>
+                <div class="promo-options-list" data-options-list>
+                  <button type="button" class="promo-option-card active" data-qty="1" data-caption="Combo 1 chai AL2" data-price="79.000đ" data-package="al2-1">
+                    <span class="promo-option-qty">1</span>
+                    <div class="promo-option-info"><p class="promo-option-title">Mua 1 chai</p><p class="promo-option-meta">Dùng thử — phù hợp sửa nhỏ lẻ</p></div>
+                    <div class="promo-option-price">79.000đ</div>
+                  </button>
+                  <button type="button" class="promo-option-card" data-qty="2" data-caption="Combo 2 chai AL2" data-price="158.000đ" data-package="al2-2" data-gift="+ Keo miễn đinh Loncool">
+                    <span class="promo-option-qty">2</span>
+                    <div class="promo-option-info"><p class="promo-option-title"><span class="promo-option-badge promo-option-badge-gift">Tặng quà</span>Combo 2 chai</p><p class="promo-option-meta">+ Keo miễn đinh Loncool</p></div>
+                    <div class="promo-option-price">158.000đ</div>
+                  </button>
+                  <button type="button" class="promo-option-card" data-qty="3" data-caption="Combo 3 chai AL2" data-price="213.300đ" data-package="al2-3" data-old="237.000đ">
+                    <span class="promo-option-qty">3</span>
+                    <div class="promo-option-info"><p class="promo-option-title"><span class="promo-option-badge promo-option-badge-sale">-10%</span>Combo 3 chai</p><p class="promo-option-meta">Tiết kiệm khi mua nhiều</p></div>
+                    <div class="promo-option-price"><span class="promo-option-price-old">237.000đ</span>213.300đ</div>
+                  </button>
+                  <button type="button" class="promo-option-card" data-qty="6" data-caption="Combo 6 chai AL2" data-price="426.600đ" data-package="al2-6" data-old="474.000đ" data-gift="+ 1 Silicone A300 Axit">
+                    <span class="promo-option-qty">6</span>
+                    <div class="promo-option-info"><p class="promo-option-title"><span class="promo-option-badge promo-option-badge-sale">-10%</span>Combo 6 chai</p><p class="promo-option-meta">+ 1 Silicone A300 Axit</p></div>
+                    <div class="promo-option-price"><span class="promo-option-price-old">474.000đ</span>426.600đ</div>
+                  </button>
+                  <button type="button" class="promo-option-card" data-qty="12" data-caption="Combo 12 chai AL2" data-price="853.200đ" data-package="al2-12" data-old="948.000đ" data-gift="+ 4 Silicone A300 Axit">
+                    <span class="promo-option-qty">12</span>
+                    <div class="promo-option-info"><p class="promo-option-title"><span class="promo-option-badge promo-option-badge-hot">HOT</span><span class="promo-option-badge promo-option-badge-sale">-10%</span>Combo 12 chai</p><p class="promo-option-meta">+ 4 Silicone A300 Axit — Bán chạy nhất</p></div>
+                    <div class="promo-option-price"><span class="promo-option-price-old">948.000đ</span>853.200đ</div>
+                  </button>
+                </div>
+                <div class="promo-panel-cta">
+                  <a href="#contact" class="promo-btn promo-btn-green" data-promo-cta>Đặt combo này — 79.000đ</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- AM2 Panel -->
+        <div id="promo-am2" class="promo-panel">
+          <div class="promo-interactive reveal" data-promo-line="am2" data-can-src="images/Keo_Alone2.png">
+            <div class="promo-split">
+              <aside class="promo-preview-panel promo-preview-panel--dark">
+                <div class="promo-cans-display" data-cans-display></div>
+                <p class="promo-preview-caption" data-preview-caption>Combo 1 chai AM2</p>
+                <p class="promo-preview-price" data-preview-price>85.000đ</p>
+              </aside>
+              <div>
+                <div class="promo-options-list" data-options-list>
+                  <button type="button" class="promo-option-card promo-option-card--dark active" data-qty="1" data-caption="Combo 1 chai AM2" data-price="85.000đ" data-package="am2-1">
+                    <span class="promo-option-qty">1</span>
+                    <div class="promo-option-info"><p class="promo-option-title">Mua 1 chai</p><p class="promo-option-meta">Kết dính chuyên dụng — dòng đen</p></div>
+                    <div class="promo-option-price">85.000đ</div>
+                  </button>
+                  <button type="button" class="promo-option-card promo-option-card--dark" data-qty="2" data-caption="Combo 2 chai AM2" data-price="170.000đ" data-package="am2-2" data-gift="+ Keo miễn đinh Loncool">
+                    <span class="promo-option-qty">2</span>
+                    <div class="promo-option-info"><p class="promo-option-title"><span class="promo-option-badge promo-option-badge-gift">Tặng quà</span>Combo 2 chai</p><p class="promo-option-meta">+ Keo miễn đinh Loncool</p></div>
+                    <div class="promo-option-price">170.000đ</div>
+                  </button>
+                  <button type="button" class="promo-option-card promo-option-card--dark" data-qty="3" data-caption="Combo 3 chai AM2" data-price="229.500đ" data-package="am2-3" data-old="255.000đ">
+                    <span class="promo-option-qty">3</span>
+                    <div class="promo-option-info"><p class="promo-option-title"><span class="promo-option-badge promo-option-badge-sale">-10%</span>Combo 3 chai</p><p class="promo-option-meta">Tiết kiệm khi mua nhiều</p></div>
+                    <div class="promo-option-price"><span class="promo-option-price-old">255.000đ</span>229.500đ</div>
+                  </button>
+                  <button type="button" class="promo-option-card promo-option-card--dark" data-qty="6" data-caption="Combo 6 chai AM2" data-price="459.000đ" data-package="am2-6" data-old="510.000đ" data-gift="+ 1 Silicone A300 Axit">
+                    <span class="promo-option-qty">6</span>
+                    <div class="promo-option-info"><p class="promo-option-title"><span class="promo-option-badge promo-option-badge-sale">-10%</span>Combo 6 chai</p><p class="promo-option-meta">+ 1 Silicone A300 Axit</p></div>
+                    <div class="promo-option-price"><span class="promo-option-price-old">510.000đ</span>459.000đ</div>
+                  </button>
+                  <button type="button" class="promo-option-card promo-option-card--dark" data-qty="12" data-caption="Combo 12 chai AM2" data-price="918.000đ" data-package="am2-12" data-old="1.020.000đ" data-gift="+ 4 Silicone A300 Axit">
+                    <span class="promo-option-qty">12</span>
+                    <div class="promo-option-info"><p class="promo-option-title"><span class="promo-option-badge promo-option-badge-hot">HOT</span><span class="promo-option-badge promo-option-badge-sale">-10%</span>Combo 12 chai</p><p class="promo-option-meta">+ 4 Silicone A300 Axit — Bán chạy nhất</p></div>
+                    <div class="promo-option-price"><span class="promo-option-price-old">1.020.000đ</span>918.000đ</div>
+                  </button>
+                </div>
+                <div class="promo-panel-cta">
+                  <a href="#contact" class="promo-btn promo-btn-dark" data-promo-cta>Đặt combo này — 85.000đ</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Free shipping banner -->
+        <div class="reveal promo-shipping-banner">
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+            <div class="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10m10 0H3m10 0h2l3-3V9a1 1 0 00-1-1h-2m-4 0V6"/></svg>
+            </div>
+            <div class="text-center sm:text-left">
+              <p class="text-xl sm:text-2xl font-bold text-white">Miễn phí vận chuyển toàn quốc</p>
+              <p class="text-white/85 text-sm font-medium">Giao nhanh 24–48h · Kiểm tra hàng trước thanh toán</p>
+            </div>
+            <a href="#contact" class="btn-shine bg-white text-aofeng-700 px-6 py-3 rounded-xl font-bold hover:bg-aofeng-50 transition-colors whitespace-nowrap text-sm">Đặt hàng ngay</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO -->
+    <section id="video" class="py-12 lg:py-20 bg-white">
+      <div class="max-w-lg lg:max-w-4xl mx-auto px-4 sm:px-6">
+        <div class="reveal text-center mb-6">
+          <span class="text-aofeng-600 font-semibold text-sm uppercase tracking-wider">Video thực tế</span>
+          <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mt-2">Xem sản phẩm AOFENG hoạt động</h2>
+          <p class="text-gray-500 text-sm mt-2">Cách xịt, độ nở và khả năng bám dính trên thực tế</p>
+        </div>
+        <div class="reveal video-player-wrap rounded-2xl overflow-hidden shadow-lg border border-gray-200 bg-gray-900" data-video-id="">
+          <div id="video-poster" class="video-poster relative cursor-pointer group" role="button" tabindex="0" aria-label="Phát video sản phẩm">
+            <img src="images/C1.jpg" alt="Video sản phẩm AOFENG" class="w-full aspect-video object-cover opacity-90">
+            <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-colors">
+              <div class="w-16 h-16 sm:w-20 sm:h-20 bg-white rounded-full flex items-center justify-center shadow-xl group-hover:scale-105 transition-transform">
+                <svg class="w-7 h-7 sm:w-9 sm:h-9 text-aofeng-600 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+            </div>
+          </div>
+          <div id="video-embed" class="hidden aspect-video">
+            <!-- Thay YOUR_VIDEO_ID bằng link YouTube thực tế -->
+            <iframe id="video-iframe" class="w-full h-full" src="" title="Video sản phẩm AOFENG" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+        <p class="text-center text-xs text-gray-400 mt-3">* Liên hệ để nhận video demo nếu chưa có link YouTube</p>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="py-12 lg:py-20 bg-aofeng-50">
+      <div class="max-w-lg lg:max-w-5xl mx-auto px-4 sm:px-6">
+        <div class="reveal text-center mb-8">
+          <span class="section-label justify-center mb-3">Ưu điểm nổi bật</span>
+          <h2 class="text-2xl sm:text-3xl font-bold text-gray-900">Tại sao chọn AOFENG?</h2>
+        </div>
+        <div class="space-y-4">
+          <div class="reveal feature-block">
+            <div class="feature-icon-wrap">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-gray-900 mb-1">Chống thấm dột</h3>
+              <p class="text-gray-600 text-sm leading-relaxed">Tạo lớp bọt nở kín, chống thấm nước, ngăn dột và hạn chế ẩm mốc. Bám chắc trên nhiều bề mặt, lấp đầy mọi khe hở.</p>
+            </div>
+            <div class="feature-block-img"><img src="images/C1.jpg" alt="Chống thấm"></div>
+          </div>
+          <div class="reveal feature-block">
+            <div class="feature-icon-wrap">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-gray-900 mb-1">Giãn nở siêu nhanh — đông cứng tức thì</h3>
+              <p class="text-gray-600 text-sm leading-relaxed">Bọt nở mạnh lấp kín khe hở. Khô nhanh tiết kiệm thời gian thi công. Bám chắc, không co không xẹp.</p>
+            </div>
+            <div class="feature-block-img"><img src="images/B2.jpg" alt="Giãn nở nhanh"></div>
+          </div>
+          <div class="reveal feature-block">
+            <div class="feature-icon-wrap">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-gray-900 mb-1">Cách âm cách nhiệt</h3>
+              <p class="text-gray-600 text-sm leading-relaxed">Giãn nở mạnh tạo lớp đệm kín — cách âm, cách nhiệt hiệu quả cho khe mái tôn, cửa sổ và vết nứt tường.</p>
+            </div>
+            <div class="feature-block-img"><img src="images/A1.jpg" alt="Cách âm nhiệt"></div>
+          </div>
+        </div>
+        <div class="reveal trust-grid mt-10">
+          <div class="trust-grid-item">
+            <div class="trust-grid-icon"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg></div>
+            <strong>Bảo hành chính hãng</strong><span>Lỗi 1 đổi 1</span>
+          </div>
+          <div class="trust-grid-item">
+            <div class="trust-grid-icon"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg></div>
+            <strong>Hỗ trợ 24/7</strong><span>Hotline tư vấn kỹ thuật</span>
+          </div>
+          <div class="trust-grid-item">
+            <div class="trust-grid-icon"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10m10 0H3m10 0h2l3-3V9a1 1 0 00-1-1h-2m-4 0V6"/></svg></div>
+            <strong>Giao hàng toàn quốc</strong><span>Miễn phí vận chuyển</span>
+          </div>
+          <div class="trust-grid-item">
+            <div class="trust-grid-icon"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+            <strong>Kiểm tra hàng</strong><span>Trước khi thanh toán</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- USAGE GUIDE -->
+    <section id="usage" class="py-12 lg:py-20 bg-white">
+      <div class="max-w-lg lg:max-w-4xl mx-auto px-4 sm:px-6">
+        <div class="reveal text-center mb-8">
+          <span class="section-label justify-center mb-3">Hướng dẫn</span>
+          <h2 class="text-2xl font-bold text-gray-900">Sử dụng siêu đơn giản — 4 bước</h2>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4 reveal">
+          <div class="usage-step-card">
+            <div class="usage-step-card-img"><img src="images/C1.jpg" alt="Bước 1"></div>
+            <div class="usage-step-card-body"><span class="usage-step-num">1</span><p>Làm sạch bề mặt cần xử lý</p></div>
+          </div>
+          <div class="usage-step-card">
+            <div class="usage-step-card-img"><img src="images/A1.jpg" alt="Bước 2"></div>
+            <div class="usage-step-card-body"><span class="usage-step-num">2</span><p>Lắc đều chai trước khi dùng</p></div>
+          </div>
+          <div class="usage-step-card">
+            <div class="usage-step-card-img"><img src="images/B1.jpg" alt="Bước 3"></div>
+            <div class="usage-step-card-body"><span class="usage-step-num">3</span><p>Lắp vòi — xịt vào khe hở (<strong>cầm ngược</strong>)</p></div>
+          </div>
+          <div class="usage-step-card">
+            <div class="usage-step-card-img"><img src="images/C2.jpg" alt="Bước 4"></div>
+            <div class="usage-step-card-body"><span class="usage-step-num">4</span><p>Chờ khô — cắt phần dư là xong</p></div>
+          </div>
+        </div>
+        <div class="reveal mt-6 p-4 rounded-xl bg-amber-50 border border-amber-200 text-sm text-amber-900 flex gap-3 items-start">
+          <svg class="w-5 h-5 flex-shrink-0 mt-0.5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg>
+          <div><strong>Lưu ý quan trọng:</strong> Dốc chai xuống dưới khi xịt để bọt ra đều. Không cầm thẳng chai — bọt có thể không ổn định, giảm độ bám dính.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPLICATIONS -->
+    <section id="applications" class="py-20 lg:py-28 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+          <span class="text-aofeng-600 font-semibold text-sm uppercase tracking-wider">Ứng dụng</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mt-3 mb-4">Ứng dụng đa dạng</h2>
+          <p class="text-gray-600">PU Foam AOFENG được sử dụng rộng rãi trong nhiều lĩnh vực khác nhau</p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="reveal delay-100 group p-6 rounded-2xl border border-aofeng-100 hover:border-aofeng-300 hover:bg-aofeng-50 transition-all duration-300 text-center">
+            <div class="w-16 h-16 mx-auto mb-4 bg-aofeng-100 rounded-2xl flex items-center justify-center group-hover:bg-aofeng-600 transition-colors">
+              <svg class="w-8 h-8 text-aofeng-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+            </div>
+            <h3 class="font-bold text-gray-900 mb-2">Xây dựng</h3>
+            <p class="text-sm text-gray-600">Lấp khe cửa, chống thấm tường, cách nhiệt mái nhà</p>
+          </div>
+          <div class="reveal delay-200 group p-6 rounded-2xl border border-aofeng-100 hover:border-aofeng-300 hover:bg-aofeng-50 transition-all duration-300 text-center">
+            <div class="w-16 h-16 mx-auto mb-4 bg-aofeng-100 rounded-2xl flex items-center justify-center group-hover:bg-aofeng-600 transition-colors">
+              <svg class="w-8 h-8 text-aofeng-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            </div>
+            <h3 class="font-bold text-gray-900 mb-2">Nội thất</h3>
+            <p class="text-sm text-gray-600">Gắn panel, trang trí, cố định vật liệu trang trí</p>
+          </div>
+          <div class="reveal delay-300 group p-6 rounded-2xl border border-aofeng-100 hover:border-aofeng-300 hover:bg-aofeng-50 transition-all duration-300 text-center">
+            <div class="w-16 h-16 mx-auto mb-4 bg-aofeng-100 rounded-2xl flex items-center justify-center group-hover:bg-aofeng-600 transition-colors">
+              <svg class="w-8 h-8 text-aofeng-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <h3 class="font-bold text-gray-900 mb-2">Công nghiệp</h3>
+            <p class="text-sm text-gray-600">Cách âm máy móc, bịt kín ống dẫn, cách nhiệt thiết bị</p>
+          </div>
+          <div class="reveal delay-400 group p-6 rounded-2xl border border-aofeng-100 hover:border-aofeng-300 hover:bg-aofeng-50 transition-all duration-300 text-center">
+            <div class="w-16 h-16 mx-auto mb-4 bg-aofeng-100 rounded-2xl flex items-center justify-center group-hover:bg-aofeng-600 transition-colors">
+              <svg class="w-8 h-8 text-aofeng-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <h3 class="font-bold text-gray-900 mb-2">Điện lạnh</h3>
+            <p class="text-sm text-gray-600">Cách nhiệt đường ống, bịt kín hệ thống HVAC</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY US -->
+    <section id="why-us" class="py-20 lg:py-28 bg-aofeng-800 text-white relative overflow-hidden">
+      <div class="absolute inset-0 opacity-10">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-aofeng-400 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-aofeng-500 rounded-full blur-3xl"></div>
+      </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+          <span class="text-aofeng-300 font-semibold text-sm uppercase tracking-wider">Ưu điểm</span>
+          <h2 class="text-3xl sm:text-4xl font-bold mt-3 mb-4">Tại sao chọn AOFENG?</h2>
+          <p class="text-aofeng-100">Những lý do khiến hàng trăm đối tác tin tưởng lựa chọn chúng tôi</p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="reveal delay-100 p-8 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/10 hover:bg-white/15 transition-colors">
+            <div class="w-12 h-12 bg-aofeng-500 rounded-xl flex items-center justify-center mb-5">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Chất lượng đảm bảo</h3>
+            <p class="text-aofeng-100 text-sm leading-relaxed">Sản phẩm đạt tiêu chuẩn ISO, kiểm tra chất lượng từng lô hàng trước khi xuất kho.</p>
+          </div>
+          <div class="reveal delay-200 p-8 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/10 hover:bg-white/15 transition-colors">
+            <div class="w-12 h-12 bg-aofeng-500 rounded-xl flex items-center justify-center mb-5">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Thân thiện môi trường</h3>
+            <p class="text-aofeng-100 text-sm leading-relaxed">Công thức không chứa CFC, an toàn cho người sử dụng và môi trường xung quanh.</p>
+          </div>
+          <div class="reveal delay-300 p-8 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/10 hover:bg-white/15 transition-colors">
+            <div class="w-12 h-12 bg-aofeng-500 rounded-xl flex items-center justify-center mb-5">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Hiệu suất vượt trội</h3>
+            <p class="text-aofeng-100 text-sm leading-relaxed">Tỷ lệ nở lên đến 2.5 lần, bám dính mạnh trên đa số vật liệu xây dựng.</p>
+          </div>
+          <div class="reveal delay-100 p-8 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/10 hover:bg-white/15 transition-colors">
+            <div class="w-12 h-12 bg-aofeng-500 rounded-xl flex items-center justify-center mb-5">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Giá cả hợp lý</h3>
+            <p class="text-aofeng-100 text-sm leading-relaxed">Sản xuất trực tiếp, không qua trung gian, cam kết giá tốt nhất thị trường.</p>
+          </div>
+          <div class="reveal delay-200 p-8 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/10 hover:bg-white/15 transition-colors">
+            <div class="w-12 h-12 bg-aofeng-500 rounded-xl flex items-center justify-center mb-5">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Giao hàng nhanh</h3>
+            <p class="text-aofeng-100 text-sm leading-relaxed">Hệ thống kho bãi toàn quốc, giao hàng trong 24-48h tại các thành phố lớn.</p>
+          </div>
+          <div class="reveal delay-300 p-8 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/10 hover:bg-white/15 transition-colors">
+            <div class="w-12 h-12 bg-aofeng-500 rounded-xl flex items-center justify-center mb-5">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Hỗ trợ kỹ thuật</h3>
+            <p class="text-aofeng-100 text-sm leading-relaxed">Đội ngũ kỹ thuật viên sẵn sàng tư vấn và hướng dẫn sử dụng sản phẩm.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="py-16 bg-aofeng-600">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center text-white">
+          <div class="reveal delay-100">
+            <p class="text-4xl lg:text-5xl font-bold stat-number" data-count="15" data-suffix="+">0</p>
+            <p class="text-aofeng-100 mt-2 text-sm">Năm kinh nghiệm</p>
+          </div>
+          <div class="reveal delay-200">
+            <p class="text-4xl lg:text-5xl font-bold stat-number" data-count="500" data-suffix="+">0</p>
+            <p class="text-aofeng-100 mt-2 text-sm">Dự án hoàn thành</p>
+          </div>
+          <div class="reveal delay-300">
+            <p class="text-4xl lg:text-5xl font-bold stat-number" data-count="1000" data-suffix="+">0</p>
+            <p class="text-aofeng-100 mt-2 text-sm">Khách hàng tin tưởng</p>
+          </div>
+          <div class="reveal delay-400">
+            <p class="text-4xl lg:text-5xl font-bold stat-number" data-count="50" data-suffix="+">0</p>
+            <p class="text-aofeng-100 mt-2 text-sm">Đại lý toàn quốc</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process" class="py-20 lg:py-28 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+          <span class="text-aofeng-600 font-semibold text-sm uppercase tracking-wider">Quy trình</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mt-3 mb-4">Quy trình hợp tác</h2>
+          <p class="text-gray-600">4 bước đơn giản để bắt đầu hợp tác cùng AOFENG</p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+          <div class="hidden lg:block absolute top-12 left-[12.5%] right-[12.5%] h-0.5 process-line"></div>
+          <div class="reveal delay-100 text-center relative">
+            <div class="w-24 h-24 mx-auto mb-6 bg-aofeng-100 rounded-full flex items-center justify-center relative z-10 border-4 border-white shadow-lg">
+              <span class="text-3xl font-bold text-aofeng-600">01</span>
+            </div>
+            <h3 class="font-bold text-gray-900 mb-2">Liên hệ tư vấn</h3>
+            <p class="text-sm text-gray-600">Gọi hotline hoặc điền form để được tư vấn miễn phí</p>
+          </div>
+          <div class="reveal delay-200 text-center relative">
+            <div class="w-24 h-24 mx-auto mb-6 bg-aofeng-100 rounded-full flex items-center justify-center relative z-10 border-4 border-white shadow-lg">
+              <span class="text-3xl font-bold text-aofeng-600">02</span>
+            </div>
+            <h3 class="font-bold text-gray-900 mb-2">Báo giá &amp; mẫu</h3>
+            <p class="text-sm text-gray-600">Nhận báo giá chi tiết và mẫu sản phẩm để kiểm tra</p>
+          </div>
+          <div class="reveal delay-300 text-center relative">
+            <div class="w-24 h-24 mx-auto mb-6 bg-aofeng-100 rounded-full flex items-center justify-center relative z-10 border-4 border-white shadow-lg">
+              <span class="text-3xl font-bold text-aofeng-600">03</span>
+            </div>
+            <h3 class="font-bold text-gray-900 mb-2">Ký hợp đồng</h3>
+            <p class="text-sm text-gray-600">Thỏa thuận điều khoản và ký kết hợp đồng chính thức</p>
+          </div>
+          <div class="reveal delay-400 text-center relative">
+            <div class="w-24 h-24 mx-auto mb-6 bg-aofeng-600 rounded-full flex items-center justify-center relative z-10 border-4 border-white shadow-lg">
+              <span class="text-3xl font-bold text-white">04</span>
+            </div>
+            <h3 class="font-bold text-gray-900 mb-2">Giao hàng</h3>
+            <p class="text-sm text-gray-600">Giao hàng nhanh chóng, hỗ trợ kỹ thuật sau bán hàng</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section id="reviews" class="py-12 lg:py-20 bg-aofeng-50">
+      <div class="max-w-lg lg:max-w-2xl mx-auto px-4 sm:px-6">
+        <div class="reveal mb-6">
+          <h2 class="text-xl sm:text-2xl font-bold text-gray-900">Khách hàng nói gì về sản phẩm?</h2>
+          <p class="text-sm text-gray-500 mt-1 flex items-center gap-1.5">
+            <span class="text-yellow-500">★★★★★</span> 500+ đánh giá thực tế
+          </p>
+        </div>
+        <div class="reveal space-y-0 bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+          <article class="review-item">
+            <div class="review-avatar bg-blue-500">NM</div>
+            <div class="review-body">
+              <p class="review-meta"><strong>Ngọc Minh</strong> · 1 ngày</p>
+              <p class="review-stars">★★★★★</p>
+              <p class="review-text">Hàng này xài rất ổn, xịt bọt nở ra siêu nhanh và bám chắc lắm. Mình dùng để trám khe hở và gắn ống nước cực tiện, mấy hôm mưa kiểm tra vẫn thấy bọt cứng cáp.</p>
+            </div>
+          </article>
+          <article class="review-item">
+            <div class="review-avatar bg-aofeng-600">HN</div>
+            <div class="review-body">
+              <p class="review-meta"><strong>Hoài Nam</strong> · 2 ngày</p>
+              <p class="review-stars">★★★★★</p>
+              <p class="review-text">Đặt hôm qua mà nay đã nhận được cả 2 chai keo, đóng gói chắc chắn, bình xịt dễ dùng, giá tốt hơn nhiều loại khác.</p>
+            </div>
+          </article>
+          <article class="review-item">
+            <div class="review-avatar bg-purple-500">TH</div>
+            <div class="review-body">
+              <p class="review-meta"><strong>Thu Hương</strong> · 3 ngày</p>
+              <p class="review-stars">★★★★★</p>
+              <p class="review-text">Keo bọt bung nở lên tốt mà chắc chắn lắm, dễ dùng, xịt vào các hốc hay khe tường lấp kín liền. Mới ấn xịt thử mà đã nở đầy khe luôn.</p>
+            </div>
+          </article>
+          <article class="review-item border-0">
+            <div class="review-avatar bg-gray-400">LV</div>
+            <div class="review-body">
+              <p class="review-meta"><strong>Lê Văn Tuấn</strong> · 5 ngày</p>
+              <p class="review-stars">★★★★★</p>
+              <p class="review-text">Dùng AM2 cho khe cửa sổ, bám rất tốt. AOFENG đúng là hàng chất lượng, sẽ mua thêm combo 6 chai.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="py-16 lg:py-20 bg-white overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12 reveal">
+          <span class="text-aofeng-600 font-semibold text-sm uppercase tracking-wider">Thư viện ảnh</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mt-3 mb-4">Sản phẩm AOFENG trong thực tế</h2>
+        </div>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+          <div class="reveal delay-100 col-span-2 row-span-2 img-product-frame img-product-frame--cover rounded-2xl card-hover">
+            <img src="images/C2.jpg" alt="Bộ sản phẩm AOFENG AM2">
+          </div>
+          <div class="reveal delay-200 img-product-frame img-product-frame--cover rounded-2xl card-hover">
+            <img src="images/A1.jpg" alt="Keo bọt nở AL2">
+          </div>
+          <div class="reveal delay-300 img-product-frame img-product-frame--cover img-product-frame-dark rounded-2xl card-hover">
+            <img src="images/A2.jpg" alt="Keo bọt nở AM2">
+          </div>
+          <div class="reveal delay-200 img-product-frame img-product-frame--cover img-product-frame-dark rounded-2xl card-hover">
+            <img src="images/B1.jpg" alt="Dòng sản phẩm công nghiệp">
+          </div>
+          <div class="reveal delay-300 img-product-frame img-product-frame--cover rounded-2xl card-hover bg-aofeng-50">
+            <img src="images/B2.jpg" alt="Dòng sản phẩm tiêu chuẩn">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-aofeng-600 relative overflow-hidden">
+      <img src="images/Keo_Alone.png" alt="" class="decor-can decor-cta-1 animate-float-slow" aria-hidden="true">
+      <img src="images/Keo_Alone2.png" alt="" class="decor-can decor-cta-2 animate-float-reverse" aria-hidden="true">
+      <div class="absolute inset-0 opacity-20">
+        <div class="absolute top-0 left-1/4 w-64 h-64 bg-white rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 right-1/4 w-64 h-64 bg-aofeng-300 rounded-full blur-3xl"></div>
+      </div>
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center relative z-10 reveal-scale">
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Sẵn sàng hợp tác cùng AOFENG?</h2>
+        <p class="text-aofeng-100 text-lg mb-8">Liên hệ ngay để nhận báo giá ưu đãi và tư vấn miễn phí về sản phẩm PU Foam</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="tel:0901234567" class="btn-shine bg-white text-aofeng-700 px-8 py-4 rounded-full font-bold hover:bg-aofeng-50 transition-colors">Gọi 0901 234 567</a>
+          <a href="#contact" class="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white/10 transition-colors">Gửi yêu cầu báo giá</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-12 lg:py-20 bg-white pb-28 lg:pb-20">
+      <div class="max-w-lg lg:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-10 lg:gap-20">
+          <div class="reveal-left">
+            <span class="text-aofeng-600 font-semibold text-sm uppercase tracking-wider">Đặt hàng</span>
+            <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mt-3 mb-4">Để lại thông tin mua hàng</h2>
+            <p class="text-gray-600 mb-6 leading-relaxed text-sm sm:text-base">1 chai AL2 chỉ từ <strong class="text-aofeng-600">79.000đ</strong> — Miễn phí vận chuyển toàn quốc.</p>
+            <div class="space-y-6">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 bg-aofeng-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-aofeng-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                </div>
+                <div><p class="font-semibold text-gray-900">Địa chỉ</p><p class="text-gray-600 text-sm mt-1">123 Đường Công Nghiệp, KCN Tân Bình, TP. Hồ Chí Minh</p></div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 bg-aofeng-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-aofeng-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                </div>
+                <div><p class="font-semibold text-gray-900">Hotline</p><p class="text-gray-600 text-sm mt-1"><a href="tel:0901234567" class="hover:text-aofeng-600 transition-colors">0901 234 567</a></p></div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 bg-aofeng-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-aofeng-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                </div>
+                <div><p class="font-semibold text-gray-900">Email</p><p class="text-gray-600 text-sm mt-1"><a href="mailto:info@aofeng.vn" class="hover:text-aofeng-600 transition-colors">info@aofeng.vn</a></p></div>
+              </div>
+            </div>
+          </div>
+          <div class="reveal-right">
+            <form class="order-form bg-white p-5 sm:p-8 rounded-2xl border border-gray-200 shadow-sm space-y-4" onsubmit="event.preventDefault(); alert('Cảm ơn bạn! AOFENG sẽ liên hệ xác nhận đơn hàng sớm nhất.');">
+              <div>
+                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Họ và tên</label>
+                <input type="text" id="name" name="name" required autocomplete="name" class="form-input" placeholder="Nhập họ tên">
+              </div>
+              <div>
+                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Số điện thoại</label>
+                <input type="tel" id="phone" name="phone" required inputmode="tel" autocomplete="tel" class="form-input" placeholder="0901 234 567">
+              </div>
+              <div>
+                <label for="address" class="block text-sm font-medium text-gray-700 mb-1">Địa chỉ nhận hàng</label>
+                <input type="text" id="address" name="address" required class="form-input" placeholder="Số nhà, phường, quận, tỉnh/thành">
+              </div>
+              <fieldset>
+                <legend class="block text-sm font-medium text-gray-700 mb-2">Chọn gói sản phẩm</legend>
+                <div class="space-y-2" id="package-options">
+                  <label class="package-option"><input type="radio" name="package" value="al2-1" checked><span><strong>AL2 — 1 chai</strong> · 79.000đ</span></label>
+                  <label class="package-option"><input type="radio" name="package" value="al2-2"><span><strong>AL2 — Combo 2 chai</strong> · 158.000đ + Loncool</span></label>
+                  <label class="package-option"><input type="radio" name="package" value="al2-3"><span><strong>AL2 — Combo 3 chai</strong> · 213.300đ <em class="text-aofeng-600">-10%</em></span></label>
+                  <label class="package-option"><input type="radio" name="package" value="al2-6"><span><strong>AL2 — Combo 6 chai</strong> · 426.600đ + Silicone</span></label>
+                  <label class="package-option package-option-hot"><input type="radio" name="package" value="al2-12"><span><strong>AL2 — Combo 12 chai</strong> · 853.200đ + 4 Silicone</span></label>
+                  <label class="package-option"><input type="radio" name="package" value="am2-1"><span><strong>AM2 — 1 chai</strong> · 85.000đ</span></label>
+                  <label class="package-option"><input type="radio" name="package" value="am2-2"><span><strong>AM2 — Combo 2 chai</strong> · 170.000đ + Loncool</span></label>
+                  <label class="package-option"><input type="radio" name="package" value="am2-3"><span><strong>AM2 — Combo 3 chai</strong> · 229.500đ <em class="text-aofeng-600">-10%</em></span></label>
+                  <label class="package-option"><input type="radio" name="package" value="am2-6"><span><strong>AM2 — Combo 6 chai</strong> · 459.000đ + Silicone</span></label>
+                  <label class="package-option"><input type="radio" name="package" value="am2-12"><span><strong>AM2 — Combo 12 chai</strong> · 918.000đ + 4 Silicone</span></label>
+                </div>
+              </fieldset>
+              <button type="submit" class="btn-shine w-full bg-aofeng-600 text-white py-4 rounded-xl font-bold text-lg hover:bg-aofeng-700 transition-colors">Gửi đơn đặt hàng</button>
+              <p class="text-xs text-gray-400 text-center">Được kiểm tra hàng trước khi thanh toán</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Mobile sticky CTA -->
+  <div class="mobile-order-bar lg:hidden">
+    <a href="tel:0901234567" class="mobile-order-call" aria-label="Gọi điện">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+    </a>
+    <a href="#contact" class="mobile-order-btn">Đặt hàng · 79.000đ</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-aofeng-900 text-white pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div>
+          <a href="#" class="inline-block mb-4">
+            <img src="images/Logo.png" alt="AOFENG" class="site-logo-img site-logo-img--footer brightness-0 invert" width="130" height="38">
+          </a>
+          <p class="text-aofeng-200 text-sm leading-relaxed">Thương hiệu keo bọt nở PU Foam hàng đầu Việt Nam. Chất lượng - Uy tín - Bền vững.</p>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4">Liên kết</h4>
+          <ul class="space-y-2 text-sm text-aofeng-200">
+            <li><a href="#about" class="hover:text-white transition-colors">Giới thiệu</a></li>
+            <li><a href="#products" class="hover:text-white transition-colors">Sản phẩm</a></li>
+            <li><a href="#promotion" class="hover:text-white transition-colors">Khuyến mãi</a></li>
+            <li><a href="#applications" class="hover:text-white transition-colors">Ứng dụng</a></li>
+            <li><a href="#contact" class="hover:text-white transition-colors">Liên hệ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4">Sản phẩm</h4>
+          <ul class="space-y-2 text-sm text-aofeng-200">
+            <li><a href="#promotion" class="hover:text-white transition-colors">Keo Bọt Nở AL2</a></li>
+            <li><a href="#promotion" class="hover:text-white transition-colors">Keo Bọt Nở AM2</a></li>
+            <li><a href="#promotion" class="hover:text-white transition-colors">Combo khuyến mãi</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4">Liên hệ</h4>
+          <ul class="space-y-2 text-sm text-aofeng-200">
+            <li>0901 234 567</li>
+            <li>info@aofeng.vn</li>
+            <li>KCN Tân Bình, TP.HCM</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-aofeng-800 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-aofeng-300">
+        <p>&copy; 2026 AOFENG. Tất cả quyền được bảo lưu.</p>
+        <div class="flex gap-4">
+          <a href="#" class="hover:text-white transition-colors" aria-label="Facebook">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="#" class="hover:text-white transition-colors" aria-label="Zalo">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
