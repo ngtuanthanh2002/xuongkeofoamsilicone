@@ -1,0 +1,16 @@
+{
+  "siteUrl": "https://aofeng.vn",
+  "siteName": "AOFENG",
+  "title": "Keo Bọt Nở PU Foam AOFENG | Chống Thấm, Cách Âm — Từ 79.000đ",
+  "description": "Keo bọt nở PU Foam AOFENG AL2 & AM2 chính hãng. Chống thấm, lấp khe, cách âm cách nhiệt. Miễn phí vận chuyển, kiểm tra hàng trước thanh toán. Hotline 0901 234 567.",
+  "locale": "vi_VN",
+  "phone": "+84901234567",
+  "email": "info@aofeng.vn",
+  "favicon": "/images/icona.png",
+  "ogImage": "/images/A1.jpg",
+  "priceCurrency": "VND",
+  "products": {
+    "al2": { "name": "Keo Bọt Nở AL2", "price": 79000 },
+    "am2": { "name": "Keo Bọt Nở AM2", "price": 85000 }
+  }
+}
