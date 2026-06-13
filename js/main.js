@@ -246,52 +246,45 @@ function initDecorParallax() {
   window.addEventListener('mousemove', onMove, { passive: true });
 }
 
-/* Use cases — tab nav + scroll spy */
+/* Use cases — tab + thumbnail gallery */
 function initUseCases() {
-  const navBtns = document.querySelectorAll('.use-case-nav-btn');
-  const panels = document.querySelectorAll('.use-case-panel');
-  if (!navBtns.length || !panels.length) return;
+  const tabs = document.querySelectorAll('.solutions-tab');
+  const panels = document.querySelectorAll('.solution-panel');
+  if (!tabs.length || !panels.length) return;
 
-  const setActive = (id) => {
-    navBtns.forEach(btn => {
-      btn.classList.toggle('active', btn.dataset.useCase === id);
+  const setActiveTab = (id) => {
+    tabs.forEach(tab => {
+      const isActive = tab.dataset.useCase === id;
+      tab.classList.toggle('active', isActive);
+      tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
     });
+
     panels.forEach(panel => {
-      panel.classList.toggle('active', panel.dataset.useCase === id);
+      const isActive = panel.dataset.useCase === id;
+      panel.classList.toggle('active', isActive);
     });
   };
 
-  navBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const id = btn.dataset.useCase;
-      const panel = document.getElementById(`use-case-${id}`);
-      if (!panel) return;
-
-      setActive(id);
-
-      const headerHeight = document.getElementById('header')?.offsetHeight || 64;
-      const top = panel.getBoundingClientRect().top + window.scrollY - headerHeight - 16;
-      window.scrollTo({ top, behavior: 'smooth' });
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      setActiveTab(tab.dataset.useCase);
     });
   });
 
-  if (!('IntersectionObserver' in window)) return;
+  document.querySelectorAll('.solution-panel').forEach(panel => {
+    const mainImg = panel.querySelector('[data-solution-main]');
+    const thumbs = panel.querySelectorAll('.solution-thumb');
+    if (!mainImg || !thumbs.length) return;
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          setActive(entry.target.dataset.useCase);
-        }
+    thumbs.forEach(thumb => {
+      thumb.addEventListener('click', () => {
+        mainImg.src = thumb.dataset.src;
+        mainImg.alt = thumb.dataset.alt || '';
+        thumbs.forEach(t => t.classList.remove('active'));
+        thumb.classList.add('active');
       });
-    },
-    {
-      threshold: 0.35,
-      rootMargin: '-20% 0px -45% 0px',
-    }
-  );
-
-  panels.forEach(panel => observer.observe(panel));
+    });
+  });
 }
 
 /* Local video hub — player + playlist */
