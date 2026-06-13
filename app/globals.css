@@ -1,0 +1,46 @@
+@import "tailwindcss";
+@import "./globals-legacy.css";
+
+@theme inline {
+  --color-background: #ffffff;
+  --color-foreground: #171717;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+
+  --color-aofeng-50: #eef4fb;
+  --color-aofeng-100: #dce9f7;
+  --color-aofeng-200: #b9d3ef;
+  --color-aofeng-300: #8fb8e3;
+  --color-aofeng-400: #5c96d4;
+  --color-aofeng-500: #2d6fad;
+  --color-aofeng-600: #003676;
+  --color-aofeng-700: #002d62;
+  --color-aofeng-800: #00244e;
+  --color-aofeng-900: #001a3a;
+}
+
+body {
+  background: #ffffff;
+  color: #1f2937;
+  font-family: var(--font-sans);
+}
+
+/* Show all solution thumbnails without horizontal scroll */
+.solution-thumbs-swiper--all-visible {
+  overflow: visible;
+}
+
+.solution-thumbs-swiper--all-visible .swiper-wrapper {
+  flex-wrap: wrap;
+  transform: none !important;
+  justify-content: flex-start;
+  row-gap: 8px;
+  width: 100% !important;
+}
+
+.solution-thumbs-swiper--all-visible.swiper {
+  height: auto;
+}
+
+.solution-thumbs-swiper--all-visible .swiper-slide {
+  flex-shrink: 0;
+}
