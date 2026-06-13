@@ -1119,22 +1119,36 @@ main {
   background: #f8fafc;
 }
 
-.solutions-tabs {
-  display: grid;
+.solutions-swiper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.solutions-pagination {
+  position: relative !important;
+  display: grid !important;
   grid-template-columns: repeat(2, 1fr);
   gap: 8px;
   margin-bottom: 16px;
+  bottom: auto !important;
+  left: auto !important;
+  width: 100% !important;
+  transform: none !important;
 }
 
 @media (min-width: 640px) {
-  .solutions-tabs {
+  .solutions-pagination {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
-.solutions-tab {
-  padding: 12px 10px;
+.solutions-pagination .swiper-pagination-bullet {
+  width: 100%;
+  height: auto;
+  margin: 0 !important;
   border-radius: 12px;
+  opacity: 1;
+  padding: 12px 10px;
   border: 1px solid #e5e7eb;
   background: white;
   font-size: 0.8rem;
@@ -1143,22 +1157,24 @@ main {
   text-align: center;
   line-height: 1.35;
   cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
   transition: border-color 0.2s, background 0.2s, color 0.2s, box-shadow 0.2s;
 }
 
 @media (min-width: 640px) {
-  .solutions-tab {
+  .solutions-pagination .swiper-pagination-bullet {
     font-size: 0.875rem;
     padding: 12px 14px;
   }
 }
 
-.solutions-tab:hover {
+.solutions-pagination .swiper-pagination-bullet:hover {
   border-color: #b9d3ef;
   color: var(--green-600);
 }
 
-.solutions-tab.active {
+.solutions-pagination .swiper-pagination-bullet-active {
   border-color: var(--green-600);
   background: var(--green-600);
   color: white;
@@ -1172,21 +1188,43 @@ main {
   border: 1px solid #e5e7eb;
   box-shadow: 0 4px 24px rgba(0, 54, 118, 0.06);
   overflow: hidden;
-}
-
-.solution-panel {
-  display: none;
   padding: 16px;
-  animation: solutionFade 0.25s ease;
 }
 
-.solution-panel.active {
+.solution-gallery-swiper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.solution-thumbs-swiper {
+  width: 100%;
+  margin-top: 2px;
+  overflow: hidden;
+}
+
+.solution-thumbs-swiper .swiper-slide {
+  width: 72px;
+  height: 54px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid #e5e7eb;
+  background: #f9fafb;
+  cursor: pointer;
+  opacity: 0.72;
+  transition: border-color 0.2s, opacity 0.2s, box-shadow 0.2s;
+}
+
+.solution-thumbs-swiper .swiper-slide-thumb-active {
+  border-color: var(--green-600);
+  opacity: 1;
+  box-shadow: 0 0 0 1px var(--green-600);
+}
+
+.solution-thumbs-swiper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
-}
-
-@keyframes solutionFade {
-  from { opacity: 0; }
-  to { opacity: 1; }
 }
 
 .solution-panel-grid {
@@ -1229,6 +1267,7 @@ main {
 
 .solution-main {
   margin: 0;
+  width: 100%;
   height: 200px;
   display: flex;
   align-items: center;
@@ -1242,7 +1281,7 @@ main {
 
 .solution-main img {
   max-width: 100%;
-  max-height: 100%;
+  max-height: 180px;
   width: auto;
   height: auto;
   object-fit: contain;
@@ -1250,43 +1289,130 @@ main {
   display: block;
 }
 
-.solution-thumbs {
-  display: flex;
-  gap: 8px;
-  overflow-x: auto;
-  padding-bottom: 4px;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
+/* Swiper — shared pagination & desktop fallbacks */
+.product-swiper-pagination,
+.spec-swiper-pagination,
+.usage-swiper-pagination,
+.video-playlist-pagination {
+  position: relative;
+  margin-top: 12px;
+  bottom: auto !important;
 }
 
-.solution-thumb {
-  flex: 0 0 auto;
-  width: 72px;
-  height: 54px;
-  padding: 0;
-  border: 2px solid #e5e7eb;
-  border-radius: 8px;
-  overflow: hidden;
-  background: #f9fafb;
-  cursor: pointer;
-  scroll-snap-align: start;
-  transition: border-color 0.2s, opacity 0.2s;
+.swiper-pagination-bullet-active {
+  background: var(--green-600) !important;
 }
 
-.solution-thumb:hover {
-  border-color: #93c5fd;
+@media (min-width: 1024px) {
+  .product-swiper .swiper-wrapper,
+  .spec-swiper .swiper-wrapper {
+    display: grid !important;
+    transform: none !important;
+    gap: 28px;
+  }
+
+  .product-swiper .swiper-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .spec-swiper .swiper-wrapper {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .product-swiper .swiper-slide,
+  .spec-swiper .swiper-slide {
+    width: 100% !important;
+    height: auto;
+  }
+
+  .product-swiper-pagination,
+  .spec-swiper-pagination,
+  .video-playlist-pagination {
+    display: none;
+  }
+
+  .video-playlist-swiper .swiper-wrapper {
+    display: flex !important;
+    flex-direction: column;
+    transform: none !important;
+    gap: 10px;
+  }
+
+  .video-playlist-swiper .swiper-slide {
+    width: 100% !important;
+    height: auto;
+  }
 }
 
-.solution-thumb.active {
-  border-color: var(--green-600);
-  box-shadow: 0 0 0 1px var(--green-600);
+@media (min-width: 640px) {
+  .usage-swiper .swiper-wrapper {
+    display: grid !important;
+    transform: none !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .usage-swiper .swiper-slide {
+    width: 100% !important;
+    height: auto;
+  }
+
+  .usage-swiper-pagination {
+    display: none;
+  }
 }
 
-.solution-thumb img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+@media (min-width: 1024px) {
+  .usage-swiper .swiper-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .product-swiper,
+  .spec-swiper,
+  .usage-swiper,
+  .video-playlist-swiper,
+  .solutions-swiper {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .product-swiper .swiper-slide,
+  .spec-swiper .swiper-slide,
+  .usage-swiper .swiper-slide,
+  .solutions-swiper > .swiper-wrapper > .swiper-slide {
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  .product-swiper .product-lineup {
+    max-width: none;
+    margin: 0;
+    gap: 0;
+  }
+
+  .product-showcase {
+    flex-direction: column;
+  }
+
+  .product-showcase-visual {
+    width: 100%;
+    max-width: none;
+  }
+
+  .video-playlist-swiper .swiper-slide {
+    width: min(220px, 75vw);
+    height: auto;
+  }
+
+  .video-playlist-swiper .video-hub-item {
+    width: 100%;
+    flex: 1 1 auto;
+  }
 }
 
 .solutions-foot {
@@ -1330,7 +1456,11 @@ main {
     height: 240px;
   }
 
-  .solution-thumb {
+  .solution-main img {
+    max-height: 220px;
+  }
+
+  .solution-thumbs-swiper .swiper-slide {
     width: 80px;
     height: 60px;
   }

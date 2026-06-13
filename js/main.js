@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initDecorParallax();
   initPromoLinks();
   initPromoPreview();
-  initUseCases();
+  initSwipers();
   initVideoHub();
 });
 
@@ -81,8 +81,8 @@ function initScrollReveal() {
       });
     },
     {
-      threshold: 0.15,
-      rootMargin: '0px 0px -50px 0px',
+      threshold: 0.1,
+      rootMargin: '0px 0px -20px 0px',
     }
   );
 
@@ -246,45 +246,161 @@ function initDecorParallax() {
   window.addEventListener('mousemove', onMove, { passive: true });
 }
 
-/* Use cases — tab + thumbnail gallery */
-function initUseCases() {
-  const tabs = document.querySelectorAll('.solutions-tab');
-  const panels = document.querySelectorAll('.solution-panel');
-  if (!tabs.length || !panels.length) return;
+/* Swiper sliders — reliable on mobile */
+const SOLUTION_LABELS = [
+  '01 · Khe hở, côn trùng',
+  '02 · Khung cửa',
+  '03 · Điều hòa & ống',
+  '04 · Tấm ốp decor',
+];
 
-  const setActiveTab = (id) => {
-    tabs.forEach(tab => {
-      const isActive = tab.dataset.useCase === id;
-      tab.classList.toggle('active', isActive);
-      tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
+const swiperStore = {};
+const DESKTOP_BP = 1024;
+const USAGE_GRID_BP = 640;
+
+function isBelow(bp) {
+  return window.matchMedia(`(max-width: ${bp - 1}px)`).matches;
+}
+
+function destroySwiper(key) {
+  if (swiperStore[key]) {
+    swiperStore[key].destroy(true, true);
+    delete swiperStore[key];
+  }
+}
+
+function initSwipers() {
+  if (typeof Swiper === 'undefined') return;
+
+  initSolutionsSwiper();
+  initResponsiveSwipers();
+  window.addEventListener('resize', debounce(initResponsiveSwipers, 200));
+  window.addEventListener('orientationchange', () => {
+    setTimeout(initResponsiveSwipers, 300);
+  });
+}
+
+function initSolutionsSwiper() {
+  const el = document.querySelector('.solutions-swiper');
+  if (!el || swiperStore.solutions) return;
+
+  swiperStore.solutions = new Swiper(el, {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    autoHeight: true,
+    speed: 400,
+    watchOverflow: true,
+    observer: true,
+    observeParents: true,
+    pagination: {
+      el: '.solutions-pagination',
+      clickable: true,
+      renderBullet(index, className) {
+        const label = SOLUTION_LABELS[index] || `Slide ${index + 1}`;
+        return `<button type="button" class="${className} solutions-tab-bullet">${label}</button>`;
+      },
+    },
+    on: {
+      slideChange(swiper) {
+        const key = `gallery-${swiper.activeIndex}`;
+        const thumbsKey = `gallery-thumbs-${swiper.activeIndex}`;
+        if (swiperStore[key]) {
+          swiperStore[key].slideTo(0, 0);
+        }
+        if (swiperStore[thumbsKey]) {
+          swiperStore[thumbsKey].slideTo(0, 0);
+        }
+      },
+    },
+  });
+
+  el.querySelectorAll('.solution-viewer').forEach((viewer, index) => {
+    const galleryEl = viewer.querySelector('.solution-gallery-swiper');
+    const thumbsEl = viewer.querySelector('.solution-thumbs-swiper');
+    if (!galleryEl || !thumbsEl) return;
+
+    const key = `gallery-${index}`;
+    const thumbsKey = `gallery-thumbs-${index}`;
+    if (swiperStore[key]) return;
+
+    swiperStore[thumbsKey] = new Swiper(thumbsEl, {
+      slidesPerView: 'auto',
+      spaceBetween: 8,
+      freeMode: true,
+      watchSlidesProgress: true,
+      nested: true,
+      observer: true,
+      observeParents: true,
     });
 
-    panels.forEach(panel => {
-      const isActive = panel.dataset.useCase === id;
-      panel.classList.toggle('active', isActive);
+    swiperStore[key] = new Swiper(galleryEl, {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      nested: true,
+      speed: 300,
+      observer: true,
+      observeParents: true,
+      thumbs: {
+        swiper: swiperStore[thumbsKey],
+      },
     });
+  });
+}
+
+function initResponsiveSwipers() {
+  initMobileSwiper('product', '.product-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 16,
+    autoHeight: true,
+    pagination: { el: '.product-swiper-pagination', clickable: true },
+  }, DESKTOP_BP);
+
+  initMobileSwiper('spec', '.spec-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 16,
+    autoHeight: true,
+    pagination: { el: '.spec-swiper-pagination', clickable: true },
+  }, DESKTOP_BP);
+
+  initMobileSwiper('video', '.video-playlist-swiper', {
+    slidesPerView: 'auto',
+    spaceBetween: 10,
+    pagination: { el: '.video-playlist-pagination', clickable: true },
+  }, DESKTOP_BP);
+
+  initMobileSwiper('usage', '.usage-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 12,
+    autoHeight: true,
+    pagination: { el: '.usage-swiper-pagination', clickable: true },
+  }, USAGE_GRID_BP);
+}
+
+function initMobileSwiper(key, selector, options, maxWidth) {
+  const el = document.querySelector(selector);
+  if (!el) return;
+
+  if (!isBelow(maxWidth)) {
+    destroySwiper(key);
+    return;
+  }
+
+  if (swiperStore[key]) return;
+
+  swiperStore[key] = new Swiper(el, {
+    observer: true,
+    observeParents: true,
+    watchOverflow: true,
+    ...options,
+  });
+}
+
+function debounce(fn, wait) {
+  let timer;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn(...args), wait);
   };
-
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      setActiveTab(tab.dataset.useCase);
-    });
-  });
-
-  document.querySelectorAll('.solution-panel').forEach(panel => {
-    const mainImg = panel.querySelector('[data-solution-main]');
-    const thumbs = panel.querySelectorAll('.solution-thumb');
-    if (!mainImg || !thumbs.length) return;
-
-    thumbs.forEach(thumb => {
-      thumb.addEventListener('click', () => {
-        mainImg.src = thumb.dataset.src;
-        mainImg.alt = thumb.dataset.alt || '';
-        thumbs.forEach(t => t.classList.remove('active'));
-        thumb.classList.add('active');
-      });
-    });
-  });
 }
 
 /* Local video hub — player + playlist */

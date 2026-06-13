@@ -65,6 +65,7 @@
       }
     }
   </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/custom.css">
 
   <!-- Structured Data -->
@@ -270,94 +271,131 @@
           <p class="text-gray-500 text-sm sm:text-base mt-2">Chọn tình huống — xem ảnh minh họa thi công thực tế.</p>
         </div>
 
-        <div class="solutions-tabs reveal" role="tablist" aria-label="Tình huống sử dụng">
-          <button type="button" class="solutions-tab active" role="tab" aria-selected="true" data-use-case="1">01 · Khe hở, côn trùng</button>
-          <button type="button" class="solutions-tab" role="tab" aria-selected="false" data-use-case="2">02 · Khung cửa</button>
-          <button type="button" class="solutions-tab" role="tab" aria-selected="false" data-use-case="3">03 · Điều hòa &amp; ống</button>
-          <button type="button" class="solutions-tab" role="tab" aria-selected="false" data-use-case="4">04 · Tấm ốp decor</button>
-        </div>
-
-        <div class="solutions-stage reveal">
-          <!-- Panel 1 -->
-          <article id="use-case-1" class="solution-panel active" data-use-case="1" role="tabpanel">
-            <div class="solution-panel-grid">
-              <div class="solution-copy">
-                <h3>Tường nứt, chuột gián chui qua khe hở</h3>
-                <p>Chuột, gián, côn trùng đang tìm cách chui qua khe hở vào nhà bạn?</p>
-              </div>
-              <div class="solution-viewer">
-                <figure class="solution-main"><img src="images/info/1/1.png" alt="Chuột chui qua khe hở tường" data-solution-main></figure>
-                <div class="solution-thumbs">
-                  <button type="button" class="solution-thumb active" data-src="images/info/1/1.png" data-alt="Chuột chui qua khe hở tường"><img src="images/info/1/1.png" alt=""></button>
-                  <button type="button" class="solution-thumb" data-src="images/info/1/2.png" data-alt="Trám khe cửa sổ"><img src="images/info/1/2.png" alt=""></button>
-                  <button type="button" class="solution-thumb" data-src="images/info/1/3.png" data-alt="Xịt bọt nở vào khe"><img src="images/info/1/3.png" alt=""></button>
-                  <button type="button" class="solution-thumb" data-src="images/info/1/4.png" data-alt="Bọt lấp vết nứt"><img src="images/info/1/4.png" alt=""></button>
-                  <button type="button" class="solution-thumb" data-src="images/info/1/5.png" data-alt="Trám vết nứt dài"><img src="images/info/1/5.png" alt=""></button>
-                  <button type="button" class="solution-thumb" data-src="images/info/1/6.png" data-alt="Xịt khe cửa"><img src="images/info/1/6.png" alt=""></button>
-                  <button type="button" class="solution-thumb" data-src="images/info/1/7.png" data-alt="Cắt bọt thừa"><img src="images/info/1/7.png" alt=""></button>
+        <div class="swiper solutions-swiper" aria-label="Tình huống sử dụng">
+          <div class="swiper-pagination solutions-pagination"></div>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" id="use-case-1">
+              <article class="solutions-stage">
+                <div class="solution-panel-grid">
+                  <div class="solution-copy">
+                    <h3>Tường nứt, chuột gián chui qua khe hở</h3>
+                    <p>Chuột, gián, côn trùng đang tìm cách chui qua khe hở vào nhà bạn?</p>
+                  </div>
+                  <div class="solution-viewer">
+                    <div class="swiper solution-gallery-swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide"><figure class="solution-main"><img src="images/info/1/1.png" alt="Chuột chui qua khe hở tường" loading="lazy"></figure></div>
+                        <div class="swiper-slide"><figure class="solution-main"><img src="images/info/1/2.png" alt="Trám khe cửa sổ" loading="lazy"></figure></div>
+                        <div class="swiper-slide"><figure class="solution-main"><img src="images/info/1/3.png" alt="Xịt bọt nở vào khe" loading="lazy"></figure></div>
+                        <div class="swiper-slide"><figure class="solution-main"><img src="images/info/1/4.png" alt="Bọt lấp vết nứt" loading="lazy"></figure></div>
+                        <div class="swiper-slide"><figure class="solution-main"><img src="images/info/1/5.png" alt="Trám vết nứt dài" loading="lazy"></figure></div>
+                        <div class="swiper-slide"><figure class="solution-main"><img src="images/info/1/6.png" alt="Xịt khe cửa" loading="lazy"></figure></div>
+                        <div class="swiper-slide"><figure class="solution-main"><img src="images/info/1/7.png" alt="Cắt bọt thừa" loading="lazy"></figure></div>
+                      </div>
+                    </div>
+                    <div class="swiper solution-thumbs-swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="images/info/1/1.png" alt="Chuột chui qua khe hở tường" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="images/info/1/2.png" alt="Trám khe cửa sổ" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="images/info/1/3.png" alt="Xịt bọt nở vào khe" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="images/info/1/4.png" alt="Bọt lấp vết nứt" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="images/info/1/5.png" alt="Trám vết nứt dài" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="images/info/1/6.png" alt="Xịt khe cửa" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="images/info/1/7.png" alt="Cắt bọt thừa" loading="lazy"></div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </article>
             </div>
-          </article>
-
-          <!-- Panel 2 -->
-          <article id="use-case-2" class="solution-panel" data-use-case="2" role="tabpanel">
-            <div class="solution-panel-grid">
-              <div class="solution-copy">
-                <h3>Trám kín khung bao cửa</h3>
-                <p>Bạn là thợ xây dựng cần trám kín khe hở khung bao cửa?</p>
-              </div>
-              <div class="solution-viewer">
-                <figure class="solution-main"><img src="images/info/2/1.png" alt="Trám khe khung cửa gỗ" data-solution-main></figure>
-                <div class="solution-thumbs">
-                  <button type="button" class="solution-thumb active" data-src="images/info/2/1.png" data-alt="Trám khe khung cửa gỗ"><img src="images/info/2/1.png" alt=""></button>
-                  <button type="button" class="solution-thumb" data-src="images/info/2/2.png" data-alt="Xịt khung cửa nhôm"><img src="images/info/2/2.png" alt=""></button>
+            <div class="swiper-slide" id="use-case-2">
+              <article class="solutions-stage">
+                <div class="solution-panel-grid">
+                  <div class="solution-copy">
+                    <h3>Trám kín khung bao cửa</h3>
+                    <p>Bạn là thợ xây dựng cần trám kín khe hở khung bao cửa?</p>
+                  </div>
+                  <div class="solution-viewer">
+                    <div class="swiper solution-gallery-swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide"><figure class="solution-main"><img src="images/info/2/1.png" alt="Trám khe khung cửa gỗ" loading="lazy"></figure></div>
+                        <div class="swiper-slide"><figure class="solution-main"><img src="images/info/2/2.png" alt="Xịt khung cửa nhôm" loading="lazy"></figure></div>
+                      </div>
+                    </div>
+                    <div class="swiper solution-thumbs-swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="images/info/2/1.png" alt="Trám khe khung cửa gỗ" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="images/info/2/2.png" alt="Xịt khung cửa nhôm" loading="lazy"></div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </article>
             </div>
-          </article>
-
-          <!-- Panel 3 -->
-          <article id="use-case-3" class="solution-panel" data-use-case="3" role="tabpanel">
-            <div class="solution-panel-grid">
-              <div class="solution-copy">
-                <h3>Lỗ điều hòa, ống điện nước &amp; hộp kỹ thuật</h3>
-                <p>Trám kín lỗ xuyên tường — ngăn nước mưa, chống côn trùng, giữ thẩm mỹ công trình.</p>
-              </div>
-              <div class="solution-viewer">
-                <figure class="solution-main"><img src="images/info/3/image.png" alt="Trám lỗ điều hòa" data-solution-main></figure>
-                <div class="solution-thumbs">
-                  <button type="button" class="solution-thumb active" data-src="images/info/3/image.png" data-alt="Trám lỗ điều hòa"><img src="images/info/3/image.png" alt=""></button>
-                  <button type="button" class="solution-thumb" data-src="images/info/3/image copy.png" data-alt="Xịt quanh ống điều hòa"><img src="images/info/3/image copy.png" alt=""></button>
-                  <button type="button" class="solution-thumb" data-src="images/info/3/image copy 2.png" data-alt="Các bước trám lỗ"><img src="images/info/3/image copy 2.png" alt=""></button>
-                  <button type="button" class="solution-thumb" data-src="images/info/3/image copy 3.png" data-alt="Ống nước trong tường"><img src="images/info/3/image copy 3.png" alt=""></button>
-                  <button type="button" class="solution-thumb" data-src="images/info/3/image copy 4.png" data-alt="Trám ống xuyên tường"><img src="images/info/3/image copy 4.png" alt=""></button>
-                  <button type="button" class="solution-thumb" data-src="images/info/3/image copy 5.png" data-alt="Cố định hộp kỹ thuật"><img src="images/info/3/image copy 5.png" alt=""></button>
-                  <button type="button" class="solution-thumb" data-src="images/info/3/image copy 6.png" data-alt="Trám khe sàn"><img src="images/info/3/image copy 6.png" alt=""></button>
-                  <button type="button" class="solution-thumb" data-src="images/info/3/image copy 7.png" data-alt="Ống điện nước"><img src="images/info/3/image copy 7.png" alt=""></button>
-                  <button type="button" class="solution-thumb" data-src="images/info/3/image copy 8.png" data-alt="Xịt khe sàn"><img src="images/info/3/image copy 8.png" alt=""></button>
+            <div class="swiper-slide" id="use-case-3">
+              <article class="solutions-stage">
+                <div class="solution-panel-grid">
+                  <div class="solution-copy">
+                    <h3>Lỗ điều hòa, ống điện nước &amp; hộp kỹ thuật</h3>
+                    <p>Trám kín lỗ xuyên tường — ngăn nước mưa, chống côn trùng, giữ thẩm mỹ công trình.</p>
+                  </div>
+                  <div class="solution-viewer">
+                    <div class="swiper solution-gallery-swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide"><figure class="solution-main"><img src="images/info/3/image.png" alt="Trám lỗ điều hòa" loading="lazy"></figure></div>
+                        <div class="swiper-slide"><figure class="solution-main"><img src="images/info/3/image copy.png" alt="Xịt quanh ống điều hòa" loading="lazy"></figure></div>
+                        <div class="swiper-slide"><figure class="solution-main"><img src="images/info/3/image copy 2.png" alt="Các bước trám lỗ" loading="lazy"></figure></div>
+                        <div class="swiper-slide"><figure class="solution-main"><img src="images/info/3/image copy 3.png" alt="Ống nước trong tường" loading="lazy"></figure></div>
+                        <div class="swiper-slide"><figure class="solution-main"><img src="images/info/3/image copy 4.png" alt="Trám ống xuyên tường" loading="lazy"></figure></div>
+                        <div class="swiper-slide"><figure class="solution-main"><img src="images/info/3/image copy 5.png" alt="Cố định hộp kỹ thuật" loading="lazy"></figure></div>
+                        <div class="swiper-slide"><figure class="solution-main"><img src="images/info/3/image copy 6.png" alt="Trám khe sàn" loading="lazy"></figure></div>
+                        <div class="swiper-slide"><figure class="solution-main"><img src="images/info/3/image copy 7.png" alt="Ống điện nước" loading="lazy"></figure></div>
+                        <div class="swiper-slide"><figure class="solution-main"><img src="images/info/3/image copy 8.png" alt="Xịt khe sàn" loading="lazy"></figure></div>
+                      </div>
+                    </div>
+                    <div class="swiper solution-thumbs-swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="images/info/3/image.png" alt="Trám lỗ điều hòa" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="images/info/3/image copy.png" alt="Xịt quanh ống điều hòa" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="images/info/3/image copy 2.png" alt="Các bước trám lỗ" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="images/info/3/image copy 3.png" alt="Ống nước trong tường" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="images/info/3/image copy 4.png" alt="Trám ống xuyên tường" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="images/info/3/image copy 5.png" alt="Cố định hộp kỹ thuật" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="images/info/3/image copy 6.png" alt="Trám khe sàn" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="images/info/3/image copy 7.png" alt="Ống điện nước" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="images/info/3/image copy 8.png" alt="Xịt khe sàn" loading="lazy"></div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </article>
             </div>
-          </article>
-
-          <!-- Panel 4 -->
-          <article id="use-case-4" class="solution-panel" data-use-case="4" role="tabpanel">
-            <div class="solution-panel-grid">
-              <div class="solution-copy">
-                <h3>Dán tấm ốp tường &amp; trang trí giả đá</h3>
-                <p>Bạn cần dán, dính tấm ốp tường, tấm trang trí giả đá?</p>
-                <p class="solution-note">Khuyến nghị dòng <strong>AM2</strong> — bám dính cực mạnh, tuổi thọ 10–30 năm.</p>
-              </div>
-              <div class="solution-viewer">
-                <figure class="solution-main"><img src="images/info/4/image.png" alt="Dán tấm ốp tường" data-solution-main></figure>
-                <div class="solution-thumbs">
-                  <button type="button" class="solution-thumb active" data-src="images/info/4/image.png" data-alt="Dán tấm ốp tường"><img src="images/info/4/image.png" alt=""></button>
-                  <button type="button" class="solution-thumb" data-src="images/info/4/image copy.png" data-alt="Xịt bọt kết dính"><img src="images/info/4/image copy.png" alt=""></button>
+            <div class="swiper-slide" id="use-case-4">
+              <article class="solutions-stage">
+                <div class="solution-panel-grid">
+                  <div class="solution-copy">
+                    <h3>Dán tấm ốp tường &amp; trang trí giả đá</h3>
+                    <p>Bạn cần dán, dính tấm ốp tường, tấm trang trí giả đá?</p>
+                    <p class="solution-note">Khuyến nghị dòng <strong>AM2</strong> — bám dính cực mạnh, tuổi thọ 10–30 năm.</p>
+                  </div>
+                  <div class="solution-viewer">
+                    <div class="swiper solution-gallery-swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide"><figure class="solution-main"><img src="images/info/4/image.png" alt="Dán tấm ốp tường" loading="lazy"></figure></div>
+                        <div class="swiper-slide"><figure class="solution-main"><img src="images/info/4/image copy.png" alt="Xịt bọt kết dính" loading="lazy"></figure></div>
+                      </div>
+                    </div>
+                    <div class="swiper solution-thumbs-swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="images/info/4/image.png" alt="Dán tấm ốp tường" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="images/info/4/image copy.png" alt="Xịt bọt kết dính" loading="lazy"></div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </article>
             </div>
-          </article>
+          </div>
         </div>
 
         <p class="solutions-foot reveal">Đừng lo — <strong>keo bọt nở AOFENG</strong> giúp bạn giải quyết. <a href="#promotion">Xem combo khuyến mãi →</a></p>
@@ -420,9 +458,11 @@
           <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mt-3 mb-4">Dòng sản phẩm PU Foam</h2>
           <p class="text-gray-600">Đa dạng chủng loại đáp ứng mọi nhu cầu từ xây dựng dân dụng đến công nghiệp nặng</p>
         </div>
-        <div class="product-lineup">
+        <div class="swiper product-swiper">
+          <div class="swiper-wrapper product-lineup">
           <!-- AL2 -->
-          <article class="product-showcase product-showcase--al2 reveal delay-100">
+          <div class="swiper-slide">
+          <article class="product-showcase product-showcase--al2">
             <div class="product-showcase-visual">
               <div class="product-showcase-visual-bg" aria-hidden="true"></div>
               <img src="images/A1.jpg" alt="Keo bọt nở PU Foam AL2" class="product-showcase-photo">
@@ -466,9 +506,11 @@
               </div>
             </div>
           </article>
+          </div>
 
           <!-- AM2 -->
-          <article class="product-showcase product-showcase--am2 reveal delay-200">
+          <div class="swiper-slide">
+          <article class="product-showcase product-showcase--am2">
             <div class="product-showcase-visual">
               <div class="product-showcase-visual-bg" aria-hidden="true"></div>
               <img src="images/A2.jpg" alt="Keo bọt nở PU Foam AM2" class="product-showcase-photo">
@@ -512,6 +554,9 @@
               </div>
             </div>
           </article>
+          </div>
+          </div>
+          <div class="swiper-pagination product-swiper-pagination"></div>
         </div>
 
         <!-- Technical specs — dual panels -->
@@ -522,7 +567,9 @@
             <p class="spec-dual-sub">Mỗi dòng một bảng riêng — đọc rõ, so sánh dễ.</p>
           </div>
 
-          <div class="spec-dual-grid">
+          <div class="swiper spec-swiper">
+          <div class="swiper-wrapper spec-dual-grid">
+            <div class="swiper-slide">
             <article class="spec-panel spec-panel--al2">
               <header class="spec-panel-hero">
                 <div class="spec-panel-hero-body">
@@ -549,7 +596,9 @@
                 <div class="spec-panel-row spec-panel-row--accent"><dt>Ứng dụng chính</dt><dd>Lấp khe, lỗ hổng — đa năng hàng ngày</dd></div>
               </dl>
             </article>
+            </div>
 
+            <div class="swiper-slide">
             <article class="spec-panel spec-panel--am2">
               <header class="spec-panel-hero">
                 <div class="spec-panel-hero-body">
@@ -576,6 +625,9 @@
                 <div class="spec-panel-row spec-panel-row--accent"><dt>Ứng dụng chính</dt><dd>Lấp khe + kết dính tấm ốp, decor</dd></div>
               </dl>
             </article>
+            </div>
+          </div>
+          <div class="swiper-pagination spec-swiper-pagination"></div>
           </div>
         </div>
       </div>
@@ -723,7 +775,9 @@
             </video>
             <p id="video-hub-title" class="video-hub-now-playing">Giới thiệu xưởng sản xuất AOFENG</p>
           </div>
-          <div class="video-hub-playlist" role="listbox" aria-label="Danh sách video">
+          <div class="swiper video-playlist-swiper">
+          <div class="swiper-wrapper video-hub-playlist" role="listbox" aria-label="Danh sách video">
+            <div class="swiper-slide">
             <button type="button" class="video-hub-item active" data-src="vid/company_introduction.mp4" data-title="Giới thiệu xưởng sản xuất AOFENG" data-poster="images/C1.jpg">
               <span class="video-hub-item-thumb"><img src="images/C1.jpg" alt=""></span>
               <span class="video-hub-item-info">
@@ -731,6 +785,8 @@
                 <span>Giới thiệu công ty &amp; quy trình</span>
               </span>
             </button>
+            </div>
+            <div class="swiper-slide">
             <button type="button" class="video-hub-item" data-src="vid/AL2_Cach_Su_Dung.mp4" data-title="Cách sử dụng keo bọt nở AL2" data-poster="images/A1.jpg">
               <span class="video-hub-item-thumb"><img src="images/A1.jpg" alt=""></span>
               <span class="video-hub-item-info">
@@ -738,6 +794,8 @@
                 <span>Thao tác xịt đúng kỹ thuật</span>
               </span>
             </button>
+            </div>
+            <div class="swiper-slide">
             <button type="button" class="video-hub-item" data-src="vid/AL2_Manual.mp4" data-title="Hướng dẫn chi tiết AL2" data-poster="images/B1.jpg">
               <span class="video-hub-item-thumb"><img src="images/B1.jpg" alt=""></span>
               <span class="video-hub-item-info">
@@ -745,6 +803,8 @@
                 <span>Manual &amp; mẹo thi công</span>
               </span>
             </button>
+            </div>
+            <div class="swiper-slide">
             <button type="button" class="video-hub-item" data-src="vid/QuangCaoAL2.mp4" data-title="Quảng cáo sản phẩm AL2" data-poster="images/B2.jpg">
               <span class="video-hub-item-thumb"><img src="images/B2.jpg" alt=""></span>
               <span class="video-hub-item-info">
@@ -752,6 +812,8 @@
                 <span>Dòng xanh đa năng</span>
               </span>
             </button>
+            </div>
+            <div class="swiper-slide">
             <button type="button" class="video-hub-item" data-src="vid/AM2_Ads.mp4" data-title="Quảng cáo sản phẩm AM2" data-poster="images/A2.jpg">
               <span class="video-hub-item-thumb"><img src="images/A2.jpg" alt=""></span>
               <span class="video-hub-item-info">
@@ -759,6 +821,9 @@
                 <span>Dòng đen kết dính chuyên dụng</span>
               </span>
             </button>
+            </div>
+          </div>
+          <div class="swiper-pagination video-playlist-pagination"></div>
           </div>
         </div>
       </div>
@@ -833,8 +898,10 @@
           <p class="text-gray-600 text-sm sm:text-base leading-relaxed">6 bước đơn giản — bọt nở đều, bám chắc, thi công chuẩn như thợ chuyên nghiệp.</p>
         </div>
 
-        <ol class="usage-steps-grid reveal">
-          <li class="usage-step-card">
+        <div class="swiper usage-swiper">
+          <div class="swiper-wrapper usage-steps-grid">
+          <div class="swiper-slide">
+          <article class="usage-step-card">
             <span class="usage-step-card-num" aria-hidden="true">1</span>
             <div class="usage-step-card-icon" aria-hidden="true">
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
@@ -843,8 +910,10 @@
               <strong>Làm sạch &amp; làm ẩm bề mặt</strong>
               <p>Làm sạch, bỏ bẩn và làm ẩm vùng cần thi công — càng ẩm thì keo càng bám tốt.</p>
             </div>
-          </li>
-          <li class="usage-step-card">
+          </article>
+          </div>
+          <div class="swiper-slide">
+          <article class="usage-step-card">
             <span class="usage-step-card-num" aria-hidden="true">2</span>
             <div class="usage-step-card-icon" aria-hidden="true">
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
@@ -853,8 +922,10 @@
               <strong>Lắc chai kỹ</strong>
               <p>Lắc đều chai <strong>15–20 lần</strong> trước khi sử dụng.</p>
             </div>
-          </li>
-          <li class="usage-step-card usage-step-card--key">
+          </article>
+          </div>
+          <div class="swiper-slide">
+          <article class="usage-step-card usage-step-card--key">
             <span class="usage-step-card-num" aria-hidden="true">3</span>
             <div class="usage-step-card-icon" aria-hidden="true">
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
@@ -863,8 +934,10 @@
               <strong>Gắn vòi hoặc súng — cầm ngược</strong>
               <p>Lắp vòi hoặc súng xịt, <strong>cầm chai ngược</strong>. Dùng vòi: ấn chặt, giữ áp lực đều.</p>
             </div>
-          </li>
-          <li class="usage-step-card usage-step-card--key">
+          </article>
+          </div>
+          <div class="swiper-slide">
+          <article class="usage-step-card usage-step-card--key">
             <span class="usage-step-card-num" aria-hidden="true">4</span>
             <div class="usage-step-card-icon" aria-hidden="true">
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
@@ -873,8 +946,10 @@
               <strong>Bơm đủ 60–70% khoảng trống</strong>
               <p>Chỉ bơm khoảng <strong>60–70%</strong> thể tích — bọt sẽ nở thêm sau khi ra.</p>
             </div>
-          </li>
-          <li class="usage-step-card">
+          </article>
+          </div>
+          <div class="swiper-slide">
+          <article class="usage-step-card">
             <span class="usage-step-card-num" aria-hidden="true">5</span>
             <div class="usage-step-card-icon" aria-hidden="true">
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243zm0 0L9.121 14.121"/></svg>
@@ -883,8 +958,10 @@
               <strong>Chờ khô rồi cắt phần thừa</strong>
               <p>Chờ bọt nở và cứng. Sau <strong>30–60 phút</strong> có thể cắt phần dư thừa.</p>
             </div>
-          </li>
-          <li class="usage-step-card">
+          </article>
+          </div>
+          <div class="swiper-slide">
+          <article class="usage-step-card">
             <span class="usage-step-card-num" aria-hidden="true">6</span>
             <div class="usage-step-card-icon" aria-hidden="true">
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
@@ -893,8 +970,11 @@
               <strong>Bảo vệ khi dùng ngoài trời</strong>
               <p>Ngoài trời, nắng trực tiếp — phủ thêm silicone, sơn hoặc vữa để bền lâu nhất.</p>
             </div>
-          </li>
-        </ol>
+          </article>
+          </div>
+          </div>
+          <div class="swiper-pagination usage-swiper-pagination"></div>
+        </div>
 
         <div class="usage-bottom reveal">
           <div class="usage-alert">
@@ -1190,6 +1270,7 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="js/main.js" defer></script>
 </body>
 </html>
