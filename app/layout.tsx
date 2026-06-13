@@ -12,6 +12,12 @@ export const metadata: Metadata = {
   title: "Keo Bọt Nở PU Foam AOFENG | Chống Thấm, Cách Âm — Từ 79.000đ",
   description:
     "Keo bọt nở PU Foam AOFENG AL2 & AM2 chính hãng. Chống thấm, lấp khe, cách âm cách nhiệt. Miễn phí vận chuyển, kiểm tra hàng trước thanh toán.",
+  icons: {
+    icon: [{ url: "/images/icona.png", type: "image/png" }],
+    shortcut: "/images/icona.png",
+    apple: "/images/icona.png",
+  },
+  manifest: "/site.webmanifest",
 };
 
 export const viewport = {

@@ -1,29 +1,8 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Pagination } from "swiper/modules";
 
-import SwiperWrapper, { SwiperSlide } from "@/components/ui/SwiperWrapper";
 import Reveal from "@/components/Reveal";
 import { products } from "@/lib/data";
-
-const DESKTOP_BP = 1024;
-
-function useIsMobile(breakpoint: number) {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const mq = window.matchMedia(`(max-width: ${breakpoint - 1}px)`);
-    const update = () => setIsMobile(mq.matches);
-    update();
-    mq.addEventListener("change", update);
-    return () => mq.removeEventListener("change", update);
-  }, [breakpoint]);
-
-  return isMobile;
-}
 
 function ProductCard({ product }: { product: (typeof products)[0] }) {
   return (
@@ -119,9 +98,6 @@ function SpecPanel({ product }: { product: (typeof products)[0] }) {
 }
 
 export default function ProductsSection() {
-  const isMobileProducts = useIsMobile(DESKTOP_BP);
-  const isMobileSpecs = useIsMobile(DESKTOP_BP);
-
   return (
     <section id="products" className="py-20 lg:py-28 relative overflow-hidden">
       <Image
@@ -154,31 +130,11 @@ export default function ProductsSection() {
           </p>
         </Reveal>
 
-        {isMobileProducts ? (
-            <SwiperWrapper
-              className="product-swiper"
-              modules={[Pagination]}
-              slidesPerView={1}
-            spaceBetween={16}
-            autoHeight
-            observer
-            observeParents
-            watchOverflow
-            pagination={{ clickable: true }}
-          >
-            {products.map((product) => (
-              <SwiperSlide key={product.id}>
-                <ProductCard product={product} />
-              </SwiperSlide>
-            ))}
-          </SwiperWrapper>
-        ) : (
-          <div className="product-lineup">
-            {products.map((product) => (
-              <ProductCard key={product.id} product={product} />
-            ))}
-          </div>
-        )}
+        <div className="product-lineup">
+          {products.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </div>
 
         <div className="spec-dual">
           <Reveal className="spec-dual-intro reveal">
@@ -189,31 +145,11 @@ export default function ProductsSection() {
             </p>
           </Reveal>
 
-          {isMobileSpecs ? (
-            <SwiperWrapper
-              className="spec-swiper"
-              modules={[Pagination]}
-              slidesPerView={1}
-              spaceBetween={16}
-              autoHeight
-              observer
-              observeParents
-              watchOverflow
-              pagination={{ clickable: true }}
-            >
-              {products.map((product) => (
-                <SwiperSlide key={product.id}>
-                  <SpecPanel product={product} />
-                </SwiperSlide>
-              ))}
-            </SwiperWrapper>
-          ) : (
-            <div className="spec-dual-grid">
-              {products.map((product) => (
-                <SpecPanel key={product.id} product={product} />
-              ))}
-            </div>
-          )}
+          <div className="spec-dual-grid">
+            {products.map((product) => (
+              <SpecPanel key={product.id} product={product} />
+            ))}
+          </div>
         </div>
       </div>
     </section>
