@@ -49,13 +49,13 @@ export default function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
           <Reveal className="reveal order-2 lg:order-1" as="div">
             <span className="section-label mb-4">
-              Chống thấm · Cách nhiệt · Chống thấm
+            Cách âm · Cách nhiệt · Chống thấm
             </span>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
               Keo Bọt Nở <span className="text-aofeng-600">PU Foam AOFENG</span>
             </h1>
             <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-5">
-              Xử lý nhanh khe hở, chống thấm, cách âm cách nhiệt. Hai dòng{" "}
+              Xử lý nhanh khe hở — cách âm, cách nhiệt, chống thấm. Hai dòng{" "}
               <strong>AL2</strong> đa năng và <strong>AM2</strong> kết dính
               chuyên dụng.
             </p>
@@ -77,7 +77,7 @@ export default function HeroSection() {
               </li>
               <li className="flex items-start gap-2.5">
                 <CheckIcon />
-                Chống thấm tối đa — cách âm & cách nhiệt
+                Cách âm · Cách nhiệt · Chống thấm tối đa
               </li>
               <li className="flex items-start gap-2.5">
                 <CheckIcon />

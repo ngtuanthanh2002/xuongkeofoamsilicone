@@ -142,7 +142,7 @@ export const products: Product[] = [
       { value: "750ml", label: "Dung tích" },
       { value: "B2", label: "Chống cháy" },
     ],
-    points: ["Chống thấm · Cách âm · Cách nhiệt", "Dùng vòi hoặc súng xịt"],
+    points: ["Cách âm · Cách nhiệt · Chống thấm", "Dùng vòi hoặc súng xịt"],
     priceFrom: "79.000đ",
     showcaseClass: "product-showcase--al2",
     ctaClass: "product-showcase-cta--al2",
@@ -158,7 +158,7 @@ export const products: Product[] = [
       { term: "Cách dùng", detail: "Vòi hoặc súng xịt" },
       { term: "Khô bề mặt", detail: "10–15 phút" },
       { term: "Cắt phần thừa", detail: "30–40 phút" },
-      { term: "Tính năng", detail: "Chống ồn · Cách nhiệt · Chống thấm" },
+      { term: "Tính năng", detail: "Cách âm · Cách nhiệt · Chống thấm" },
       { term: "Cấu trúc bọt", detail: "Ô nhỏ dày, chống thấm tốt" },
       {
         term: "Ứng dụng chính",
@@ -199,7 +199,7 @@ export const products: Product[] = [
       { term: "Cách dùng", detail: "Vòi hoặc súng xịt" },
       { term: "Khô bề mặt", detail: "10–15 phút" },
       { term: "Cắt phần thừa", detail: "30–50 phút" },
-      { term: "Tính năng", detail: "Chống ồn · Cách nhiệt · Chống thấm" },
+      { term: "Tính năng", detail: "Cách âm · Cách nhiệt · Chống thấm" },
       {
         term: "Đặc biệt",
         detail: "Không co · Không chảy dầu · Bám cực mạnh",
